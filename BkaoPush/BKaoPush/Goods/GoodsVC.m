@@ -11,7 +11,7 @@
 #import "KPGoodsShowCell.h"
 #define TableViewTag 100
 #import "KPGoodSellModel.h"
-
+#import "KPGoodsEditView.h"
 static NSString * goodsCellIdentifier = @"cellId";
 
 @interface GoodsVC ()<KPTopHeaderDelegate,UITableViewDelegate,UITableViewDataSource>
@@ -153,22 +153,45 @@ static NSString * goodsCellIdentifier = @"cellId";
     [cell setCellType:tableIndex];
     
     //点击回调
+    __weak typeof(self) weakself = self;
     cell.clickBlock = ^(NSInteger clickIndex){
         if (clickIndex == 0) {
-            if (tableIndex == Selling) {
-                NSLog(@"下架按钮");
-            }else{
-                NSLog(@"上架按钮");
-            }
+            [weakself shagnjiaAndxiaJiaModel:model type:tableIndex];//点击上架 或者 下架按钮
         }else{
-            //编辑数量价格
+            [self bianjiClick:model type:tableIndex]; //编辑按钮
         }
-        
-        
     };
     
     return  cell;
 }
+
+-(void)shagnjiaAndxiaJiaModel:(KPGoodSellModel*)model type:(CellType)type{
+    if (type == Selling) {
+        NSLog(@"下架按钮");
+    }else{
+        NSLog(@"上架按钮");
+    }
+     //走网络请求  然后刷新tableView
+   
+}
+
+/**
+
+ @param type 是在售 还是  下架页
+ */
+-(void)bianjiClick:(KPGoodSellModel *)model type:(CellType)type{
+    //编辑数量价格
+    KPGoodsEditView * view =  [KPGoodsEditView editViewWithModel:model];
+    
+    [view showinView:self.tabBarController.view  Andcomplete:^{//点击确定之后
+        NSLog(@"修改之后的%@",view.model);
+        
+        //走网络请求  然后刷新tableView
+        [[_mainScrollview viewWithTag:TableViewTag + type] reloadData];
+    }];
+
+}
+
 
 
 #pragma 头部点击代理

@@ -77,6 +77,8 @@
 		632688E71DCB0DF800C23923 /* KPGoodsShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 632688E51DCB0DF800C23923 /* KPGoodsShowCell.m */; };
 		632688E81DCB0DF800C23923 /* KPGoodsShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632688E61DCB0DF800C23923 /* KPGoodsShowCell.xib */; };
 		632688EC1DCB15E000C23923 /* KPGoodSellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 632688EB1DCB15E000C23923 /* KPGoodSellModel.m */; };
+		632688EF1DCB3BAA00C23923 /* KPGoodsEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 632688EE1DCB3BAA00C23923 /* KPGoodsEditView.m */; };
+		632688F11DCB3D5400C23923 /* KPGoodsEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632688F01DCB3D5400C23923 /* KPGoodsEditView.xib */; };
 		EA1BA2911DC6D87900372467 /* KPDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1BA2901DC6D87900372467 /* KPDownload.m */; };
 		EA1BA2971DC6DC9A00372467 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1BA2961DC6DC9A00372467 /* logo.png */; };
 		EA1BA29C1DC6E25100372467 /* AFAppDotNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1BA2991DC6E25100372467 /* AFAppDotNetAPIClient.m */; };
@@ -84,7 +86,6 @@
 		EA1BA2A01DC7172A00372467 /* KPSNSLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1BA29F1DC7172A00372467 /* KPSNSLoginVC.m */; };
 		EA1BA2A31DC72A9B00372467 /* KPProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1BA2A21DC72A9B00372467 /* KPProgress.m */; };
 		EA1BA2A51DC7462D00372467 /* headNav_Gray.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1BA2A41DC7462D00372467 /* headNav_Gray.png */; };
-		EA1BA2A91DC759EB00372467 /* headNav_Gray.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1BA2A81DC759EB00372467 /* headNav_Gray.png */; };
 		EA23B2181DC5C99B00F85602 /* 48.png in Resources */ = {isa = PBXBuildFile; fileRef = EA23B1F31DC5C99B00F85602 /* 48.png */; };
 		EA23B2191DC5C99B00F85602 /* 绑定成功.png in Resources */ = {isa = PBXBuildFile; fileRef = EA23B1F41DC5C99B00F85602 /* 绑定成功.png */; };
 		EA23B21A1DC5C99B00F85602 /* 编辑.png in Resources */ = {isa = PBXBuildFile; fileRef = EA23B1F51DC5C99B00F85602 /* 编辑.png */; };
@@ -433,6 +434,9 @@
 		632688E61DCB0DF800C23923 /* KPGoodsShowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPGoodsShowCell.xib; sourceTree = "<group>"; };
 		632688EA1DCB15E000C23923 /* KPGoodSellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGoodSellModel.h; sourceTree = "<group>"; };
 		632688EB1DCB15E000C23923 /* KPGoodSellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGoodSellModel.m; sourceTree = "<group>"; };
+		632688ED1DCB3BAA00C23923 /* KPGoodsEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGoodsEditView.h; sourceTree = "<group>"; };
+		632688EE1DCB3BAA00C23923 /* KPGoodsEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGoodsEditView.m; sourceTree = "<group>"; };
+		632688F01DCB3D5400C23923 /* KPGoodsEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPGoodsEditView.xib; sourceTree = "<group>"; };
 		EA1BA28F1DC6D87900372467 /* KPDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPDownload.h; sourceTree = "<group>"; };
 		EA1BA2901DC6D87900372467 /* KPDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPDownload.m; sourceTree = "<group>"; };
 		EA1BA2951DC6D92900372467 /* KPRequestURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPRequestURL.h; sourceTree = "<group>"; };
@@ -446,7 +450,6 @@
 		EA1BA2A11DC72A9B00372467 /* KPProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPProgress.h; sourceTree = "<group>"; };
 		EA1BA2A21DC72A9B00372467 /* KPProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPProgress.m; sourceTree = "<group>"; };
 		EA1BA2A41DC7462D00372467 /* headNav_Gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headNav_Gray.png; sourceTree = "<group>"; };
-		EA1BA2A81DC759EB00372467 /* headNav_Gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headNav_Gray.png; sourceTree = "<group>"; };
 		EA23B1F31DC5C99B00F85602 /* 48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 48.png; sourceTree = "<group>"; };
 		EA23B1F41DC5C99B00F85602 /* 绑定成功.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定成功.png"; sourceTree = "<group>"; };
 		EA23B1F51DC5C99B00F85602 /* 编辑.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "编辑.png"; sourceTree = "<group>"; };
@@ -1150,14 +1153,17 @@
 			path = "账户详情";
 			sourceTree = "<group>";
 		};
-		632688E31DCB0D8A00C23923 /* 商品管理cell */ = {
+		632688E31DCB0D8A00C23923 /* 商品管相关视图 */ = {
 			isa = PBXGroup;
 			children = (
 				632688E41DCB0DF800C23923 /* KPGoodsShowCell.h */,
 				632688E51DCB0DF800C23923 /* KPGoodsShowCell.m */,
 				632688E61DCB0DF800C23923 /* KPGoodsShowCell.xib */,
+				632688ED1DCB3BAA00C23923 /* KPGoodsEditView.h */,
+				632688EE1DCB3BAA00C23923 /* KPGoodsEditView.m */,
+				632688F01DCB3D5400C23923 /* KPGoodsEditView.xib */,
 			);
-			name = "商品管理cell";
+			name = "商品管相关视图";
 			sourceTree = "<group>";
 		};
 		632688E91DCB15C400C23923 /* 商品管理models */ = {
@@ -1468,7 +1474,7 @@
 			isa = PBXGroup;
 			children = (
 				632688E91DCB15C400C23923 /* 商品管理models */,
-				632688E31DCB0D8A00C23923 /* 商品管理cell */,
+				632688E31DCB0D8A00C23923 /* 商品管相关视图 */,
 				EA31DA751DB5F6EA003B2BD6 /* GoodsVC.h */,
 				EA31DA761DB5F6EA003B2BD6 /* GoodsVC.m */,
 				632688E01DCAE4F700C23923 /* KPTopHeader.h */,
@@ -1536,7 +1542,6 @@
 				EA1BA2961DC6DC9A00372467 /* logo.png */,
 				08F12EEA1DBA04FC00CA9535 /* B端UI1.0_ICON */,
 				EA31DC8D1DB61555003B2BD6 /* headNav.png */,
-				EA1BA2A81DC759EB00372467 /* headNav_Gray.png */,
 				EA31DA8F1DB5FF1E003B2BD6 /* buton_2.png */,
 				EA31DA901DB5FF1E003B2BD6 /* buton_2_highlighted.png */,
 				EA31DA911DB5FF1E003B2BD6 /* ceshi.jpeg */,
@@ -2048,6 +2053,7 @@
 				EA31DAF61DB5FF1E003B2BD6 /* 1元夺宝.png in Resources */,
 				EA31DAE21DB5FF1E003B2BD6 /* scan_line@2x.png in Resources */,
 				08DC2B8B1DC1ADEF008DEF30 /* PayTwoTableViewCell.xib in Resources */,
+				632688F11DCB3D5400C23923 /* KPGoodsEditView.xib in Resources */,
 				EA31DAF31DB5FF1E003B2BD6 /* 购物车@2x.png in Resources */,
 				EA23B2381DC5C99B00F85602 /* Tabbar_首页_选中@2x.png in Resources */,
 				EA23B2351DC5C99B00F85602 /* Tabbar_商品管理_未选中@2x.png in Resources */,
@@ -2097,7 +2103,6 @@
 				EA31DB041DB5FF1E003B2BD6 /* 评价晒单.png in Resources */,
 				EA23B21B1DC5C99B00F85602 /* 个人中心_帮助中心.png in Resources */,
 				EA23B23B1DC5C99B00F85602 /* Tabbar_我的_未选中@2x.png in Resources */,
-				EA1BA2A91DC759EB00372467 /* headNav_Gray.png in Resources */,
 				EA31DAEE1DB5FF1E003B2BD6 /* 分享@2x.png in Resources */,
 				EA31DAD41DB5FF1E003B2BD6 /* disablebtn.png in Resources */,
 				EA31DAF21DB5FF1E003B2BD6 /* 联系店家@2x.png in Resources */,
@@ -2221,6 +2226,7 @@
 				08DC2B3A1DBF50CE008DEF30 /* KPJinZhangXQViewController.m in Sources */,
 				632688E71DCB0DF800C23923 /* KPGoodsShowCell.m in Sources */,
 				08F12E741DB8964D00CA9535 /* KPPersonView.m in Sources */,
+				632688EF1DCB3BAA00C23923 /* KPGoodsEditView.m in Sources */,
 				EA31DC581DB5FFCB003B2BD6 /* UIScrollView+MJExtension.m in Sources */,
 				08F12F391DBA09D900CA9535 /* KPKeFuViewController.m in Sources */,
 				EA7E8A871DBBC56E008DC3EB /* IQUIScrollView+Additions.m in Sources */,
