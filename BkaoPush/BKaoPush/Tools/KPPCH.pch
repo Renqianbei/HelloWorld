@@ -111,6 +111,7 @@
 #define KPYellowColor                       [UIColor colorWithRed:0.941 green:0.733 blue:0.153 alpha:1.000]
 #define KP_GRAYCOLOR                        [UIColor colorWithWhite:0.95 alpha:1.000]
 
+#define KP_RedColor                     RGB(240, 57, 57)
 
 #define A_FONT                              10
 //字体集合
