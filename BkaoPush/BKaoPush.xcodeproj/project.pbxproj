@@ -74,6 +74,9 @@
 		08F12F5E1DBEF40A00CA9535 /* KPHuiYuanXQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F12F5D1DBEF40A00CA9535 /* KPHuiYuanXQViewController.m */; };
 		08F12F611DBF1F6800CA9535 /* KPHuiYuanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F12F601DBF1F6800CA9535 /* KPHuiYuanTableViewCell.m */; };
 		632688E21DCAE4F700C23923 /* KPTopHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 632688E11DCAE4F700C23923 /* KPTopHeader.m */; };
+		632688E71DCB0DF800C23923 /* KPGoodsShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 632688E51DCB0DF800C23923 /* KPGoodsShowCell.m */; };
+		632688E81DCB0DF800C23923 /* KPGoodsShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632688E61DCB0DF800C23923 /* KPGoodsShowCell.xib */; };
+		632688EC1DCB15E000C23923 /* KPGoodSellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 632688EB1DCB15E000C23923 /* KPGoodSellModel.m */; };
 		EA1BA2911DC6D87900372467 /* KPDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1BA2901DC6D87900372467 /* KPDownload.m */; };
 		EA1BA2971DC6DC9A00372467 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1BA2961DC6DC9A00372467 /* logo.png */; };
 		EA1BA29C1DC6E25100372467 /* AFAppDotNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1BA2991DC6E25100372467 /* AFAppDotNetAPIClient.m */; };
@@ -425,6 +428,11 @@
 		08F12F601DBF1F6800CA9535 /* KPHuiYuanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPHuiYuanTableViewCell.m; sourceTree = "<group>"; };
 		632688E01DCAE4F700C23923 /* KPTopHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPTopHeader.h; sourceTree = "<group>"; };
 		632688E11DCAE4F700C23923 /* KPTopHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPTopHeader.m; sourceTree = "<group>"; };
+		632688E41DCB0DF800C23923 /* KPGoodsShowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGoodsShowCell.h; sourceTree = "<group>"; };
+		632688E51DCB0DF800C23923 /* KPGoodsShowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGoodsShowCell.m; sourceTree = "<group>"; };
+		632688E61DCB0DF800C23923 /* KPGoodsShowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPGoodsShowCell.xib; sourceTree = "<group>"; };
+		632688EA1DCB15E000C23923 /* KPGoodSellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGoodSellModel.h; sourceTree = "<group>"; };
+		632688EB1DCB15E000C23923 /* KPGoodSellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGoodSellModel.m; sourceTree = "<group>"; };
 		EA1BA28F1DC6D87900372467 /* KPDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPDownload.h; sourceTree = "<group>"; };
 		EA1BA2901DC6D87900372467 /* KPDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPDownload.m; sourceTree = "<group>"; };
 		EA1BA2951DC6D92900372467 /* KPRequestURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPRequestURL.h; sourceTree = "<group>"; };
@@ -1142,6 +1150,25 @@
 			path = "账户详情";
 			sourceTree = "<group>";
 		};
+		632688E31DCB0D8A00C23923 /* 商品管理cell */ = {
+			isa = PBXGroup;
+			children = (
+				632688E41DCB0DF800C23923 /* KPGoodsShowCell.h */,
+				632688E51DCB0DF800C23923 /* KPGoodsShowCell.m */,
+				632688E61DCB0DF800C23923 /* KPGoodsShowCell.xib */,
+			);
+			name = "商品管理cell";
+			sourceTree = "<group>";
+		};
+		632688E91DCB15C400C23923 /* 商品管理models */ = {
+			isa = PBXGroup;
+			children = (
+				632688EA1DCB15E000C23923 /* KPGoodSellModel.h */,
+				632688EB1DCB15E000C23923 /* KPGoodSellModel.m */,
+			);
+			name = "商品管理models";
+			sourceTree = "<group>";
+		};
 		EA1BA28B1DC6D84000372467 /* request */ = {
 			isa = PBXGroup;
 			children = (
@@ -1440,6 +1467,8 @@
 		EA31DA741DB5F6EA003B2BD6 /* Goods */ = {
 			isa = PBXGroup;
 			children = (
+				632688E91DCB15C400C23923 /* 商品管理models */,
+				632688E31DCB0D8A00C23923 /* 商品管理cell */,
 				EA31DA751DB5F6EA003B2BD6 /* GoodsVC.h */,
 				EA31DA761DB5F6EA003B2BD6 /* GoodsVC.m */,
 				632688E01DCAE4F700C23923 /* KPTopHeader.h */,
@@ -2038,6 +2067,7 @@
 				EA31DAD91DB5FF1E003B2BD6 /* main_等级_03.png in Resources */,
 				EA31DAF91DB5FF1E003B2BD6 /* 待付款.png in Resources */,
 				EA23B22B1DC5C99B00F85602 /* 系统消息_喇叭.png in Resources */,
+				632688E81DCB0DF800C23923 /* KPGoodsShowCell.xib in Resources */,
 				EA23B2181DC5C99B00F85602 /* 48.png in Resources */,
 				EA31DAEC1DB5FF1E003B2BD6 /* E@2x.png in Resources */,
 				EA31DAF11DB5FF1E003B2BD6 /* 编辑地址.png in Resources */,
@@ -2122,6 +2152,7 @@
 				EA31DA8C1DB5F743003B2BD6 /* KPTabbar.m in Sources */,
 				08F12F531DBE13AB00CA9535 /* KPChaKanViewController.m in Sources */,
 				EA31DC4C1DB5FFCB003B2BD6 /* MJRefreshHeader.m in Sources */,
+				632688EC1DCB15E000C23923 /* KPGoodSellModel.m in Sources */,
 				EA31DC2C1DB5FFCB003B2BD6 /* UIProgressView+AFNetworking.m in Sources */,
 				08F12F5B1DBE32F700CA9535 /* KPAccountViewController.m in Sources */,
 				EA31DC681DB5FFCB003B2BD6 /* SDWebImageCompat.m in Sources */,
@@ -2188,6 +2219,7 @@
 				08F12F571DBE2A8900CA9535 /* KPChongZhiViewController.m in Sources */,
 				EA23B29F1DC6031000F85602 /* ShouHouScrollViewModel.m in Sources */,
 				08DC2B3A1DBF50CE008DEF30 /* KPJinZhangXQViewController.m in Sources */,
+				632688E71DCB0DF800C23923 /* KPGoodsShowCell.m in Sources */,
 				08F12E741DB8964D00CA9535 /* KPPersonView.m in Sources */,
 				EA31DC581DB5FFCB003B2BD6 /* UIScrollView+MJExtension.m in Sources */,
 				08F12F391DBA09D900CA9535 /* KPKeFuViewController.m in Sources */,
