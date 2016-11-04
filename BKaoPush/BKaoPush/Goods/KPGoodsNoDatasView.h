@@ -11,6 +11,8 @@
 @interface KPGoodsNoDatasView : UIView
 
 +(instancetype)NoDataViewWithTitle:(NSString *)title;
+@property (weak, nonatomic) IBOutlet UILabel *subTitle;
 
 
+-(void)reloaData;
 @end

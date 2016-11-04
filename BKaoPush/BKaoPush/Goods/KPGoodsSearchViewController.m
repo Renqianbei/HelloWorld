@@ -1,76 +1,82 @@
 //
-//  GoodsVC.m
-//  KaoPushB
+//  KPGoodsSearchViewController.m
+//  BKaoPush
 //
-//  Created by Jincang Lu on 2016/10/18.
+//  Created by 任前辈 on 2016/11/4.
 //  Copyright © 2016年 shanghai kaoPush. All rights reserved.
 //
-
-#import "GoodsVC.h"
 #import "KPTopHeader.h"
 #import "KPGoodsShowCell.h"
 #import "KPGoodSellModel.h"
 #import "KPGoodsEditView.h"
 #import "KPGoodsNoDatasView.h"
 #import "KPGoodsSearchViewController.h"
-#import "KPNewGoodsView.h"
+
 #define TableViewTag 100
 
-static NSString * goodsCellIdentifier = @"cellId";
+static NSString * goodsSeacrhCellIdentifier = @"cellId";
 
-@interface GoodsVC ()<KPTopHeaderDelegate,UITableViewDelegate,UITableViewDataSource>
+
+@interface KPGoodsSearchViewController ()<KPTopHeaderDelegate>
 {
-    
-    NSMutableArray * _noDatasViews;
-  }
+    KPGoodsNoDatasView * _nodataView;
+}
 @property ( nonatomic,strong)   KPTopHeader * header;
 @property ( nonatomic,strong)  UIScrollView * mainScrollview;
-
 /**
-  在售商品 和 已下架商品 数据源
+ 在售商品 和 已下架商品 数据源
  */
 @property ( nonatomic,strong)  NSMutableArray * goodsShowDataSources;
-
-
 @end
 
-@implementation GoodsVC
+@implementation KPGoodsSearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    [self prepareBarButton];
-    
-    
     //创建刷选
     [self initHeaderFliter];
-    //创建 在售商品 和 已下架商品
+    //创建 在售商品 和 已下架商品tableView 和无数据显示的视图
     [self initTableViews];
     
-    [self loadData];//获取数据
-
+    [self createNavView];//创建搜索框
+    // Do any additional setup after loading the view from its nib.
 }
 
-/**
-  模拟网络请求
- */
-- (void)loadData{
+
+- (void)createNavView{
+    [self createRightBarButtonItem:RightItemTypeTxt text:@"搜索"];
+    [self createLeftBarButtonItem];
+    //
+    UITextField * textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth - 100, 40)];
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    UIImageView * imageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 24)];
+    imageview.contentMode = UIViewContentModeScaleAspectFit;
+    imageview.image = [UIImage imageNamed:@"搜索2"];
+    textField.leftView = imageview;
+    textField.leftViewMode = UITextFieldViewModeAlways;
+    textField.placeholder = @"请输入商品名称";
+    self.navigationItem.titleView = textField;
+    
+}
+
+//搜索数据  刷新tableview
+- (void)searchData:(NSString *)keywords{
     
     //网络请求 刷新tableView
     _goodsShowDataSources = [NSMutableArray array];
     
     NSMutableArray * sells = [NSMutableArray array]; //获取 在售商品数据
     NSMutableArray * downs = [NSMutableArray array];//获取仓库商品或者说已下架商品数据
-   
-    int count = arc4random()%2;
-    int count1 = arc4random()%10;
-
+    
+    int count = arc4random()%1;
+    int count1 = arc4random()%3;
+    
     //在售
     for (int i = 0; i < count; i ++) {
         //
         KPGoodSellModel  * model = [KPGoodSellModel jiashuju];
         [sells addObject:model];
-    
+        
     }
     //已下架
     for (int i = 0; i <count1; i ++) {
@@ -79,20 +85,30 @@ static NSString * goodsCellIdentifier = @"cellId";
         [downs addObject:model];
     }
     
-     //如果 没有数据显示 无数据页
 
     [_goodsShowDataSources addObject:sells];
     [_goodsShowDataSources addObject:downs];
     
     //判断网络请求结果
-    [self setNoDataAtIndex:Selling hidden:sells.count!=0];//是否隐藏无数据页
-    [self setNoDataAtIndex:HasDone hidden:downs.count!=0];//是否隐藏无数据页
-
-  
-    //刷新数据
+    if (sells.count==0&&downs.count ==0) {
+        _nodataView.hidden = NO;//没有搜到数据 显示无数据
+        [self.view addSubview:_nodataView];
+    }else{
+        _nodataView.hidden = YES;
+    }
+    
+    //刷新数据 刷新tableview
     [self reloadTabelView:Selling];
     [self reloadTabelView:HasDone];
-    
+
+}
+
+
+
+-(void)rightBarButtonItemAction{
+    NSLog(@"搜索");
+    UITextField * textfield = (UITextField*)self.navigationItem.titleView;
+    [self searchData:textfield.text];//搜索数据
 }
 
 //刷新tableView
@@ -102,15 +118,11 @@ static NSString * goodsCellIdentifier = @"cellId";
 }
 
 
-- (void)setNoDataAtIndex:(CellType)type hidden:(BOOL) hidden{
-   
-    [_noDatasViews[type] setHidden:hidden];
-}
 
 
 - (void)initHeaderFliter{
     
-    _header = [[KPTopHeader alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, 50) withTitleArr:@[@"在售商品",@"仓库商品",@"新增商品"]];
+    _header = [[KPTopHeader alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, 50) withTitleArr:@[@"在售商品",@"已下架"]];
     _header.delegate  = self;
     [self.view addSubview:_header];
     
@@ -119,11 +131,10 @@ static NSString * goodsCellIdentifier = @"cellId";
 
 - (void)initTableViews{
     float originy = CGRectGetMaxY(_header.frame) ;
-    _mainScrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, originy, ScreenWidth, ScreenHeight - originy - 44)];
+    _mainScrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, originy, ScreenWidth, ScreenHeight - originy)];
     _mainScrollview.contentSize = CGSizeMake(_mainScrollview.frame.size.width*3, _mainScrollview.frame.size.height);
     _mainScrollview.pagingEnabled = YES;
     _mainScrollview.delegate = self;
-   /*=======前两个视图=====*/
     for (int i = 0 ; i<2 ; i++) {
         CGRect frame = _mainScrollview.bounds;
         frame.origin.x  = _mainScrollview.frame.size.width * i;
@@ -136,74 +147,29 @@ static NSString * goodsCellIdentifier = @"cellId";
         tableView.dataSource = self;
         tableView.tableFooterView = [UIView new];
         tableView.backgroundColor = KP_GRAYCOLOR;
-
-//        tableView.backgroundColor = @[[UIColor redColor],[UIColor blueColor],[UIColor blackColor]][i];
-        [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([KPGoodsShowCell class]) bundle:nil] forCellReuseIdentifier:goodsCellIdentifier];
-
+        
+        //        tableView.backgroundColor = @[[UIColor redColor],[UIColor blueColor],[UIColor blackColor]][i];
+        [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([KPGoodsShowCell class]) bundle:nil] forCellReuseIdentifier:goodsSeacrhCellIdentifier];
+        
         [_mainScrollview addSubview:tableView];
         
     }
-    [self.view addSubview:_mainScrollview];
-    /*=======第三个视图=====*/
-    KPNewGoodsView * newGoodsView = [KPNewGoodsView NewGoodsView];
-    CGRect frame = _mainScrollview.bounds;
-    frame.origin.x  = _mainScrollview.frame.size.width *2;
-    newGoodsView.frame = frame;
-    [_mainScrollview addSubview:newGoodsView];
+        [self.view addSubview:_mainScrollview];
     
-    //无内容 应该显示的提示图
-        _noDatasViews = [NSMutableArray array];
-        NSArray * titles = @[@"您还没有在售商品\n去上架点新产品吧",@"您仓库没有商品"];
-        int i = 0;
-        for (NSString * title in titles) {
-            KPGoodsNoDatasView * view = [KPGoodsNoDatasView NoDataViewWithTitle:title];
-            view.frame = CGRectMake(i++*_mainScrollview.frame.size.width, 0, ScreenWidth, ScreenHeight - originy - 44);
-            [_mainScrollview addSubview:view];
-            [_noDatasViews addObject:view];
-            view.hidden = YES;
-        }
+//        //无内容 应该显示的提示图
+        NSString * title =  @"抱歉，没有搜到您要的商品";
+        _nodataView = [KPGoodsNoDatasView NoDataViewWithTitle:title];
+        _nodataView.frame = CGRectMake(0, originy, ScreenWidth, ScreenHeight - originy);
+        _nodataView.subTitle.hidden = NO;
 }
-
-
-
-
-//修改一下基类的  navBar  状态
-- (void) prepareBarButton{
-    
-    [self setMyTitle:@"商品管理"];
-    [self createRightBarButtonItem:RightItemTypeImage text:@"搜索"];
-    
-//    [self.rightButton setImage:IMAGE(@"搜索") forState:UIControlStateNormal];
-}
-
-
-- (void)rightBarButtonItemAction
-{
-    NSLog(@"搜索");
-    KPGoodsSearchViewController * vc = [[KPGoodsSearchViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
-    
-}
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"headNav"] forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.translucent = YES;
-    
-    [KPTabbar shareTabBarController:NO].tabBar.hidden =NO;
-    
-}
 
-#pragma mark tableViewDelegate DataSource 
+#pragma mark tableViewDelegate DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     //找到对应tableview
     return [_goodsShowDataSources[tableView.tag - TableViewTag]  count];
@@ -213,7 +179,7 @@ static NSString * goodsCellIdentifier = @"cellId";
 // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    KPGoodsShowCell * cell = [tableView dequeueReusableCellWithIdentifier:goodsCellIdentifier forIndexPath:indexPath];
+    KPGoodsShowCell * cell = [tableView dequeueReusableCellWithIdentifier:goodsSeacrhCellIdentifier forIndexPath:indexPath];
     NSInteger tableIndex = tableView.tag - TableViewTag;
     KPGoodSellModel * model = _goodsShowDataSources[tableIndex][indexPath.row];
     cell.model = model;
@@ -231,19 +197,19 @@ static NSString * goodsCellIdentifier = @"cellId";
     
     return  cell;
 }
-#pragma mark 
+#pragma mark
 -(void)shagnjiaAndxiaJiaModel:(KPGoodSellModel*)model type:(CellType)type{
     if (type == Selling) {
         NSLog(@"下架按钮");
     }else{
         NSLog(@"上架按钮");
     }
-     //走网络请求  然后刷新tableView
-   
+    //走网络请求  然后刷新tableView
+    
 }
 
 /**
-
+ 
  @param type 是在售 还是  下架页
  */
 -(void)bianjiClick:(KPGoodSellModel *)model type:(CellType)type{
@@ -256,7 +222,7 @@ static NSString * goodsCellIdentifier = @"cellId";
         //走网络请求  然后刷新tableView
         [[_mainScrollview viewWithTag:TableViewTag + type] reloadData];
     }];
-
+    
 }
 
 
@@ -264,9 +230,6 @@ static NSString * goodsCellIdentifier = @"cellId";
 #pragma mark 头部点击代理
 - (void) scrollTitleButtAction:(NSInteger)index{
     [_mainScrollview setContentOffset:CGPointMake(_mainScrollview.frame.size.width*index, 0) animated:YES];
-    
-    //是否需要判断当前tableview有没有数据 进行刷新？？
-//    [self loadData];
 }
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
@@ -274,6 +237,7 @@ static NSString * goodsCellIdentifier = @"cellId";
         [_header scrollAnimation:(_mainScrollview.contentOffset.x/_mainScrollview.frame.size.width) ];
     }
 }
+
 /*
 #pragma mark - Navigation
 

@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "KPGoodSellModel.h"
 @interface KPNearHotCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIButton *headButton;
+
 @property(nonatomic,strong)KPGoodSellModel * model;
 @end

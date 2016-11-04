@@ -27,13 +27,21 @@
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="88a-On-bK9">
                     <rect key="frame" x="0.0" y="150" width="375" height="517"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="iN0-l3-epB" id="jic-ej-DxU"/>
                         <outlet property="delegate" destination="iN0-l3-epB" id="Yag-dd-tpM"/>
                     </connections>
                 </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="————    周把热销商品    ————" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOx-HV-N34">
+                    <rect key="frame" x="10" y="127.5" width="355" height="14.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstItem="88a-On-bK9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1gE-9G-gVo"/>
                 <constraint firstAttribute="trailing" secondItem="kjP-Vj-Vqk" secondAttribute="trailing" id="C9e-51-SPf"/>
@@ -41,11 +49,15 @@
                 <constraint firstItem="kjP-Vj-Vqk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="be8-RF-4FW"/>
                 <constraint firstItem="88a-On-bK9" firstAttribute="top" secondItem="kjP-Vj-Vqk" secondAttribute="bottom" id="dPe-e7-ud9"/>
                 <constraint firstAttribute="bottom" secondItem="88a-On-bK9" secondAttribute="bottom" id="jZA-TC-4CC"/>
+                <constraint firstItem="SOx-HV-N34" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="m2j-1O-y1u"/>
+                <constraint firstAttribute="trailing" secondItem="SOx-HV-N34" secondAttribute="trailing" constant="10" id="nOi-SL-Xfq"/>
                 <constraint firstItem="kjP-Vj-Vqk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rov-nr-AF8"/>
+                <constraint firstItem="88a-On-bK9" firstAttribute="top" secondItem="SOx-HV-N34" secondAttribute="bottom" constant="8" id="sVn-DM-TXW"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <connections>
                 <outlet property="label" destination="kjP-Vj-Vqk" id="TBg-Mo-2bS"/>
+                <outlet property="subTitle" destination="SOx-HV-N34" id="rHy-mP-VXS"/>
                 <outlet property="tableView" destination="88a-On-bK9" id="NcP-c4-VeV"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="54.5"/>
