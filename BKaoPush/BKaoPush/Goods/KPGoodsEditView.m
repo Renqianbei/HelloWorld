@@ -28,7 +28,8 @@
     KPGoodsEditView * editowner = [[KPGoodsEditView alloc] init];
     editowner.model = model;
     editowner.frame = ScreenRect;
-    UIButton  * grayView = [[UIButton alloc] initWithFrame:ScreenRect];
+    
+    UIButton  * grayView = [[UIButton alloc] initWithFrame:ScreenRect];//黑色背景
     [grayView addTarget:editowner action:@selector(hideView) forControlEvents:UIControlEventTouchUpInside];
     grayView.backgroundColor = [UIColor blackColor];
     grayView.alpha  = 0.7;
@@ -38,22 +39,32 @@
     editowner.sureButton.layer.cornerRadius = 4;
     editowner.sureButton.backgroundColor = KPYellowColor;
     editowner.sureButton.layer.masksToBounds = YES;
-    [editowner refreshView];
+    [editowner refreshView];//给视图添加文字
     
+    //计算可变行的高度 如果超过图片高度以图片为准
     CGSize size = [KPTool stringCGSize:model.title font:L_FONT width:editowner.frame.size.width - 70 - 10 height:500];
     if (size.height > SubViewImageHeight) {
         CGRect frame = editowner.view.frame;
         frame.size.height  += size.height - SubViewImageHeight + 10;
         editowner.view.frame = frame;
     }
+    
+    
     [editowner addSubview:editowner.view];
     return editowner;
 }
 
+
+//确认修改
 - (IBAction)clickButton:(id)sender {
     if (_clickSure) {
         self.clickSure();
     }
+    //更改修改后的信息
+    self.model.goodDescrip = self.goodsDesc.text;
+    self.model.price = self.price.text;
+    self.model.totalCount = self.count.text;
+    
     [self hideView];
 }
 
@@ -87,10 +98,10 @@
     
 }
 
-- (void)hideView{
+- (IBAction)hideView{
 //    UIView * view = [UIApplication sharedApplication].keyWindow;
     CGRect frame = self.view.frame;
-    frame.origin.y = ScreenHeight;
+    frame.origin.y += frame.size.height + 10;
     [UIView animateWithDuration:0.2 animations:^{
         self.view.frame = frame;
     } completion:^(BOOL finished) {
@@ -100,7 +111,6 @@
 
 
 #pragma  mark TextFieldDelegate
-
 
 
 @end

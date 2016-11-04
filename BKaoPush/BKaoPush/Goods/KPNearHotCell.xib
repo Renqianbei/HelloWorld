@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="72" id="KGk-i7-Jjw" customClass="KPNearHotCell">
+            <rect key="frame" x="0.0" y="0.0" width="298" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="298" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWQ-cw-JJJ">
+                        <rect key="frame" x="55" y="8" width="233" height="22.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="销售额等等" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caf-uq-IDv">
+                        <rect key="frame" x="55" y="38.5" width="233" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWj-bq-ctU">
+                        <rect key="frame" x="10" y="14.5" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="5do-c4-ftP"/>
+                            <constraint firstAttribute="height" constant="35" id="jW4-CD-xCI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                        <state key="normal" title="04">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="headbutton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wMg-FX-ZHM"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pWQ-cw-JJJ" firstAttribute="leading" secondItem="uWj-bq-ctU" secondAttribute="trailing" constant="10" id="5p9-q4-FMy"/>
+                    <constraint firstItem="caf-uq-IDv" firstAttribute="top" secondItem="pWQ-cw-JJJ" secondAttribute="bottom" constant="8" id="98D-ht-RdG"/>
+                    <constraint firstAttribute="trailing" secondItem="caf-uq-IDv" secondAttribute="trailing" constant="10" id="Dvz-k9-GVY"/>
+                    <constraint firstItem="caf-uq-IDv" firstAttribute="leading" secondItem="pWQ-cw-JJJ" secondAttribute="leading" id="SDx-71-ChH"/>
+                    <constraint firstAttribute="bottom" secondItem="caf-uq-IDv" secondAttribute="bottom" constant="10" id="SYA-M6-7uh"/>
+                    <constraint firstItem="uWj-bq-ctU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cBs-Os-HkD"/>
+                    <constraint firstItem="uWj-bq-ctU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="hcN-QD-eTc"/>
+                    <constraint firstAttribute="trailing" secondItem="pWQ-cw-JJJ" secondAttribute="trailing" constant="10" id="j2a-05-B6p"/>
+                    <constraint firstItem="pWQ-cw-JJJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="kpg-1s-54Z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="goodDesp" destination="caf-uq-IDv" id="tBC-QJ-fdI"/>
+                <outlet property="headButton" destination="uWj-bq-ctU" id="Dtj-Th-zbE"/>
+                <outlet property="title" destination="pWQ-cw-JJJ" id="zGm-hr-1Mb"/>
+            </connections>
+            <point key="canvasLocation" x="23" y="-27"/>
+        </tableViewCell>
+    </objects>
+</document>

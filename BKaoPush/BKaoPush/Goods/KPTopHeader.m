@@ -21,7 +21,7 @@
 - (instancetype)initWithFrame:(CGRect)frame withTitleArr:(NSArray *)title
 {
     if ([super initWithFrame:frame]) {
-        
+        self.backgroundColor = [UIColor whiteColor];
         titleArr = [[NSArray alloc] initWithArray:title];
         UIView * line = [[UIView alloc] initWithFrame:CGRectMake(0, ORDER_H-1, ScreenWidth, 1)];
         line.backgroundColor = KP_GRAYCOLOR;

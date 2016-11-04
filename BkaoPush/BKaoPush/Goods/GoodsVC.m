@@ -32,6 +32,7 @@ static NSString * goodsCellIdentifier = @"cellId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = KP_GRAYCOLOR;
     // Do any additional setup after loading the view.
     [self prepareBarButton];
     
@@ -77,7 +78,7 @@ static NSString * goodsCellIdentifier = @"cellId";
 
 - (void)initTableViews{
     float originy = CGRectGetMaxY(_header.frame) + 10;
-    _mainScrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, originy, ScreenWidth, ScreenHeight - originy )];
+    _mainScrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, originy, ScreenWidth, ScreenHeight - originy - 44)];
     _mainScrollview.contentSize = CGSizeMake(_mainScrollview.frame.size.width*3, _mainScrollview.frame.size.height);
     _mainScrollview.pagingEnabled = YES;
     _mainScrollview.delegate = self;
@@ -164,7 +165,7 @@ static NSString * goodsCellIdentifier = @"cellId";
     
     return  cell;
 }
-
+#pragma mark 
 -(void)shagnjiaAndxiaJiaModel:(KPGoodSellModel*)model type:(CellType)type{
     if (type == Selling) {
         NSLog(@"下架按钮");
@@ -194,7 +195,7 @@ static NSString * goodsCellIdentifier = @"cellId";
 
 
 
-#pragma 头部点击代理
+#pragma mark 头部点击代理
 - (void) scrollTitleButtAction:(NSInteger)index{
     [_mainScrollview setContentOffset:CGPointMake(_mainScrollview.frame.size.width*index, 0) animated:YES];
 }

@@ -7,6 +7,10 @@
 //
 
 #import "KPGoodsShowCell.h"
+@interface KPGoodsShowCell()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *centerinterval;
+
+@end
 
 @implementation KPGoodsShowCell
 -(void)setCellType:(CellType)type{
@@ -15,7 +19,12 @@
             [self.leftButton setTitle:@"下架" forState:UIControlStateNormal];
             break;
         case HasDone:
-            [self.leftButton setTitle:@"上架架" forState:UIControlStateNormal];
+            [self.leftButton setTitle:@"上架" forState:UIControlStateNormal];
+            //已下架是不显示 成交额 和 已售的
+            self.centerinterval.constant = 0;
+            self.sellCount.hidden = YES;
+            self.sellTotalPrice.hidden = YES;
+
             break;
         default:
             break;
@@ -33,6 +42,7 @@
 }
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.leftButton.layer.cornerRadius = 4;
     self.leftButton.layer.borderColor = [UIColor grayColor].CGColor;
     self.leftButton.layer.borderWidth = 1;

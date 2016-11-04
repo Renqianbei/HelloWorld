@@ -79,6 +79,10 @@
 		632688EC1DCB15E000C23923 /* KPGoodSellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 632688EB1DCB15E000C23923 /* KPGoodSellModel.m */; };
 		632688EF1DCB3BAA00C23923 /* KPGoodsEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 632688EE1DCB3BAA00C23923 /* KPGoodsEditView.m */; };
 		632688F11DCB3D5400C23923 /* KPGoodsEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632688F01DCB3D5400C23923 /* KPGoodsEditView.xib */; };
+		637E1B6A1DCC3A25001C5A6E /* KPGoodsNoDatasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 637E1B691DCC3A25001C5A6E /* KPGoodsNoDatasView.m */; };
+		637E1B6C1DCC3AD4001C5A6E /* KPGoodsNoDatasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637E1B6B1DCC3AD4001C5A6E /* KPGoodsNoDatasView.xib */; };
+		637E1B701DCC3CDE001C5A6E /* KPNearHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 637E1B6E1DCC3CDE001C5A6E /* KPNearHotCell.m */; };
+		637E1B711DCC3CDE001C5A6E /* KPNearHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637E1B6F1DCC3CDE001C5A6E /* KPNearHotCell.xib */; };
 		EA1BA2911DC6D87900372467 /* KPDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1BA2901DC6D87900372467 /* KPDownload.m */; };
 		EA1BA2971DC6DC9A00372467 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1BA2961DC6DC9A00372467 /* logo.png */; };
 		EA1BA29C1DC6E25100372467 /* AFAppDotNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1BA2991DC6E25100372467 /* AFAppDotNetAPIClient.m */; };
@@ -437,6 +441,12 @@
 		632688ED1DCB3BAA00C23923 /* KPGoodsEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGoodsEditView.h; sourceTree = "<group>"; };
 		632688EE1DCB3BAA00C23923 /* KPGoodsEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGoodsEditView.m; sourceTree = "<group>"; };
 		632688F01DCB3D5400C23923 /* KPGoodsEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPGoodsEditView.xib; sourceTree = "<group>"; };
+		637E1B681DCC3A25001C5A6E /* KPGoodsNoDatasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGoodsNoDatasView.h; sourceTree = "<group>"; };
+		637E1B691DCC3A25001C5A6E /* KPGoodsNoDatasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGoodsNoDatasView.m; sourceTree = "<group>"; };
+		637E1B6B1DCC3AD4001C5A6E /* KPGoodsNoDatasView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPGoodsNoDatasView.xib; sourceTree = "<group>"; };
+		637E1B6D1DCC3CDE001C5A6E /* KPNearHotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPNearHotCell.h; sourceTree = "<group>"; };
+		637E1B6E1DCC3CDE001C5A6E /* KPNearHotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPNearHotCell.m; sourceTree = "<group>"; };
+		637E1B6F1DCC3CDE001C5A6E /* KPNearHotCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPNearHotCell.xib; sourceTree = "<group>"; };
 		EA1BA28F1DC6D87900372467 /* KPDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPDownload.h; sourceTree = "<group>"; };
 		EA1BA2901DC6D87900372467 /* KPDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPDownload.m; sourceTree = "<group>"; };
 		EA1BA2951DC6D92900372467 /* KPRequestURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPRequestURL.h; sourceTree = "<group>"; };
@@ -1162,6 +1172,12 @@
 				632688ED1DCB3BAA00C23923 /* KPGoodsEditView.h */,
 				632688EE1DCB3BAA00C23923 /* KPGoodsEditView.m */,
 				632688F01DCB3D5400C23923 /* KPGoodsEditView.xib */,
+				637E1B681DCC3A25001C5A6E /* KPGoodsNoDatasView.h */,
+				637E1B691DCC3A25001C5A6E /* KPGoodsNoDatasView.m */,
+				637E1B6B1DCC3AD4001C5A6E /* KPGoodsNoDatasView.xib */,
+				637E1B6D1DCC3CDE001C5A6E /* KPNearHotCell.h */,
+				637E1B6E1DCC3CDE001C5A6E /* KPNearHotCell.m */,
+				637E1B6F1DCC3CDE001C5A6E /* KPNearHotCell.xib */,
 			);
 			name = "商品管相关视图";
 			sourceTree = "<group>";
@@ -2058,8 +2074,10 @@
 				EA23B2381DC5C99B00F85602 /* Tabbar_首页_选中@2x.png in Resources */,
 				EA23B2351DC5C99B00F85602 /* Tabbar_商品管理_未选中@2x.png in Resources */,
 				EA31DADF1DB5FF1E003B2BD6 /* nva_muen.png in Resources */,
+				637E1B6C1DCC3AD4001C5A6E /* KPGoodsNoDatasView.xib in Resources */,
 				EA31DADC1DB5FF1E003B2BD6 /* nav_back.png in Resources */,
 				EA23B2241DC5C99B00F85602 /* 首页_冠军商品.png in Resources */,
+				637E1B711DCC3CDE001C5A6E /* KPNearHotCell.xib in Resources */,
 				EA31DADD1DB5FF1E003B2BD6 /* nav_message.png in Resources */,
 				EA23B2291DC5C99B00F85602 /* 提现.png in Resources */,
 				EA31DAE11DB5FF1E003B2BD6 /* scan_box@2x.png in Resources */,
@@ -2211,6 +2229,7 @@
 				EA31DC491DB5FFCB003B2BD6 /* MJRefreshBackFooter.m in Sources */,
 				08F12E8E1DB9C55F00CA9535 /* KPZhangHGLTableViewCell.m in Sources */,
 				EA1BA2A31DC72A9B00372467 /* KPProgress.m in Sources */,
+				637E1B701DCC3CDE001C5A6E /* KPNearHotCell.m in Sources */,
 				EA31DC221DB5FFCB003B2BD6 /* AFSecurityPolicy.m in Sources */,
 				EA31DC571DB5FFCB003B2BD6 /* MJRefreshConst.m in Sources */,
 				08DC2B331DBF3AA1008DEF30 /* KPMingXIHarder.m in Sources */,
@@ -2271,6 +2290,7 @@
 				EA7E8A911DBBC56E008DC3EB /* IQTitleBarButtonItem.m in Sources */,
 				EA23B2651DC602C200F85602 /* MASViewConstraint.m in Sources */,
 				EA7E8A861DBBC56E008DC3EB /* IQNSArray+Sort.m in Sources */,
+				637E1B6A1DCC3A25001C5A6E /* KPGoodsNoDatasView.m in Sources */,
 				EA31DC6E1DB5FFCB003B2BD6 /* UIButton+WebCache.m in Sources */,
 				08DC2B701DC073CA008DEF30 /* KPTianJiaSuccessViewController.m in Sources */,
 				08F12E6E1DB87C5F00CA9535 /* KPZhangHaoViewController.m in Sources */,
