@@ -7,7 +7,7 @@
 //
 
 #import "KPBaseVC.h"
-
+#import "KPSelectModel.h"
 @interface KPAddGoodsDetailViewController : KPBaseVC
-
+    @property(nonatomic,strong)KPSelectModel * model;
 @end

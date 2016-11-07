@@ -64,8 +64,11 @@ static  NSString * SelectCellID = @"SelectCellID";
     //构建必要数据 按UI样式 顺序添加
     _cellModels = [NSMutableArray array];
     
+    //具体内容 由上一个页面传过来的model决定  或者 由上一个页面传过来的id来 进行请求获取具体数据 然后 按下面顺序 给每行添加数据
+    
+    
     //创建每行对应的cell 模型 包含cell的样式 以及数据
-    KPNewGoodsCellTypeModel * row1 = [KPNewGoodsCellTypeModel modelWithCellID:SimpleCellID title:@"商品名称" content:@"商品名称显示对应的内容"];
+    KPNewGoodsCellTypeModel * row1 = [KPNewGoodsCellTypeModel modelWithCellID:SimpleCellID title:@"商品名称" content:self.model.title];
      KPNewGoodsCellTypeModel * row2 = [KPNewGoodsCellTypeModel modelWithCellID:ImageShowCellID title:@"商品图片" content:@""];
         row2.imageUrls = @[@"图片url1",@"图片url2",@"图片url2",@"图片url2",@"图片url2",@"图片url2",@"图片url2"];
     KPNewGoodsCellTypeModel * row3 = [KPNewGoodsCellTypeModel modelWithCellID:EditCellID title:@"描述" content:@"" placehHoderContent:@"请填写一句话描述(选填)"];

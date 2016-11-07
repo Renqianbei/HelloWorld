@@ -9,6 +9,7 @@
 #import "KPNewGoodsSelectsVC.h"
 #import "KPGoodsThirdCell.h"
 #import "KPCollectionHeaderView.h"
+#import "KPAddGoodsDetailViewController.h"
 static NSString * collectionCellID = @"cellID";
 static NSString * collectionHeaderId = @"collectionHeaderId";
 @interface KPNewGoodsSelectsVC ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
@@ -66,6 +67,10 @@ static NSString * collectionHeaderId = @"collectionHeaderId";
     
     KPSelectModel * model  = self.model.nextModels[indexPath.item];
     
+    KPAddGoodsDetailViewController * vc = [[KPAddGoodsDetailViewController alloc] init];
+    vc.model = model;
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

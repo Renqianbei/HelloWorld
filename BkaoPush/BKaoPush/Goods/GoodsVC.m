@@ -14,11 +14,7 @@
 #import "KPGoodsNoDatasView.h"
 #import "KPGoodsSearchViewController.h"
 #import "KPNewGoodsView.h"
-<<<<<<< HEAD
 #import "KPNewGoodsSelectsVC.h"
-=======
-#import "KPAddGoodsDetailViewController.h"
->>>>>>> e242ca31d596594a50041a72a8655e4641e7d001
 
 #define TableViewTag 100
 
@@ -187,8 +183,8 @@ static NSString * goodsCellIdentifier = @"cellId";
 - (void)rightBarButtonItemAction
 {
     NSLog(@"搜索");
-//    KPGoodsSearchViewController * vc = [[KPGoodsSearchViewController alloc] init];
-    KPAddGoodsDetailViewController * vc = [[KPAddGoodsDetailViewController alloc] init];
+    KPGoodsSearchViewController * vc = [[KPGoodsSearchViewController alloc] init];
+//    KPAddGoodsDetailViewController * vc = [[KPAddGoodsDetailViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
     
 }
