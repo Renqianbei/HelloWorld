@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KPSelectModel.h"
+
+@protocol NewGoodsSelectDelegate<NSObject>
+
+-(void)didClickCollectionItemWithModel:(KPSelectModel*)model;
+@end
 
 @interface KPNewGoodsView : UIView
-+(instancetype)NewGoodsView;
+@property(nonatomic,weak)id<NewGoodsSelectDelegate>delegate;
++(instancetype)NewGoodsViewWithDelegate:(id<NewGoodsSelectDelegate>)delegate;
+
 
 @end

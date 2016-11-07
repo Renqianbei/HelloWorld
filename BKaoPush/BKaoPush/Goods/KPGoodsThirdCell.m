@@ -14,8 +14,15 @@
     [super awakeFromNib];
     self.button.layer.cornerRadius = 4;
     self.button.layer.borderColor = KPGrayColor.CGColor;
-     self.button.layer.borderWidth = 1;
+    self.button.layer.borderWidth = 1;
+    self.button.userInteractionEnabled = NO;
     // Initialization code
+    
+    UIView * view = [[UIView alloc] initWithFrame:self.button.bounds];
+    view.layer.cornerRadius = 4;
+    view.backgroundColor = KPYellowColor;
+    self.selectedBackgroundView = view;
+
 }
 - (IBAction)buttonClick:(id)sender {
     

@@ -10,7 +10,6 @@
 #import "AppDelegate+AppService.h"
 #import "AppDelegate+RootController.h"
 #import "KPTabbar.h"
-
 @interface AppDelegate ()
 
 @end
@@ -24,6 +23,7 @@
     [self setAppWindows];
     
     [self setRootViewController];
+    
     
     [self checkNetwork];
     

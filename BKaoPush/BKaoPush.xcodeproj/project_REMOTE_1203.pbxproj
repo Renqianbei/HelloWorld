@@ -89,15 +89,6 @@
 		637E1B7E1DCCA1B0001C5A6E /* KPNewGoodsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637E1B7D1DCCA1B0001C5A6E /* KPNewGoodsView.xib */; };
 		637E1B831DCCA844001C5A6E /* KPGoodsThirdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 637E1B811DCCA844001C5A6E /* KPGoodsThirdCell.m */; };
 		637E1B841DCCA844001C5A6E /* KPGoodsThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637E1B821DCCA844001C5A6E /* KPGoodsThirdCell.xib */; };
-<<<<<<< HEAD
-
-		63D378B31DCF68F700F4FF52 /* KPSelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D378B21DCF68F700F4FF52 /* KPSelectModel.m */; };
-		63D378B71DCF7DCD00F4FF52 /* KPNewGoodsSelectsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D378B51DCF7DCD00F4FF52 /* KPNewGoodsSelectsVC.m */; };
-		63D378B81DCF7DCD00F4FF52 /* KPNewGoodsSelectsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D378B61DCF7DCD00F4FF52 /* KPNewGoodsSelectsVC.xib */; };
-		63D378BC1DCF844900F4FF52 /* KPCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D378BA1DCF844900F4FF52 /* KPCollectionHeaderView.m */; };
-		63D378BD1DCF844900F4FF52 /* KPCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D378BB1DCF844900F4FF52 /* KPCollectionHeaderView.xib */; };
-=======
->>>>>>> e242ca31d596594a50041a72a8655e4641e7d001
 		638785FB1DD01F8200D80086 /* KPAddGoodsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638785F91DD01F8200D80086 /* KPAddGoodsDetailViewController.m */; };
 		638785FC1DD01F8200D80086 /* KPAddGoodsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638785FA1DD01F8200D80086 /* KPAddGoodsDetailViewController.xib */; };
 		638786011DD021E700D80086 /* KPAddGoodsEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 638785FF1DD021E700D80086 /* KPAddGoodsEditCell.m */; };
@@ -112,10 +103,6 @@
 		6387861A1DD0337500D80086 /* KPNewGoodsCellTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 638786191DD0337500D80086 /* KPNewGoodsCellTypeModel.m */; };
 		6387861D1DD060B900D80086 /* KPNewGoodsBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6387861C1DD060B900D80086 /* KPNewGoodsBaseCell.m */; };
 		638786201DD07E2A00D80086 /* UIImage+KPColorToImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6387861F1DD07E2A00D80086 /* UIImage+KPColorToImage.m */; };
-<<<<<<< HEAD
->>>>>>> e242ca31d596594a50041a72a8655e4641e7d001
-=======
->>>>>>> e242ca31d596594a50041a72a8655e4641e7d001
 		EA1BA2911DC6D87900372467 /* KPDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1BA2901DC6D87900372467 /* KPDownload.m */; };
 		EA1BA2971DC6DC9A00372467 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1BA2961DC6DC9A00372467 /* logo.png */; };
 		EA1BA29C1DC6E25100372467 /* AFAppDotNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1BA2991DC6E25100372467 /* AFAppDotNetAPIClient.m */; };
@@ -484,24 +471,11 @@
 		637E1B731DCC826A001C5A6E /* KPGoodsSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGoodsSearchViewController.m; sourceTree = "<group>"; };
 		637E1B741DCC826A001C5A6E /* KPGoodsSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPGoodsSearchViewController.xib; sourceTree = "<group>"; };
 		637E1B7A1DCCA17A001C5A6E /* KPNewGoodsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPNewGoodsView.h; path = ../../KPNewGoodsView.h; sourceTree = "<group>"; };
-		637E1B7B1DCCA17A001C5A6E /* KPNewGoodsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KPNewGoodsView.m; path = ../../KPNewGoodsView.m; sourceTree = "<group>"; wrapsLines = 0; };
+		637E1B7B1DCCA17A001C5A6E /* KPNewGoodsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KPNewGoodsView.m; path = ../../KPNewGoodsView.m; sourceTree = "<group>"; };
 		637E1B7D1DCCA1B0001C5A6E /* KPNewGoodsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPNewGoodsView.xib; sourceTree = "<group>"; };
 		637E1B801DCCA844001C5A6E /* KPGoodsThirdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGoodsThirdCell.h; sourceTree = "<group>"; };
 		637E1B811DCCA844001C5A6E /* KPGoodsThirdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGoodsThirdCell.m; sourceTree = "<group>"; };
 		637E1B821DCCA844001C5A6E /* KPGoodsThirdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPGoodsThirdCell.xib; sourceTree = "<group>"; };
-<<<<<<< HEAD
-<<<<<<< HEAD
-		63D378B11DCF68F700F4FF52 /* KPSelectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPSelectModel.h; sourceTree = "<group>"; };
-		63D378B21DCF68F700F4FF52 /* KPSelectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPSelectModel.m; sourceTree = "<group>"; };
-		63D378B41DCF7DCD00F4FF52 /* KPNewGoodsSelectsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPNewGoodsSelectsVC.h; sourceTree = "<group>"; };
-		63D378B51DCF7DCD00F4FF52 /* KPNewGoodsSelectsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPNewGoodsSelectsVC.m; sourceTree = "<group>"; };
-		63D378B61DCF7DCD00F4FF52 /* KPNewGoodsSelectsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPNewGoodsSelectsVC.xib; sourceTree = "<group>"; };
-		63D378B91DCF844900F4FF52 /* KPCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCollectionHeaderView.h; sourceTree = "<group>"; };
-		63D378BA1DCF844900F4FF52 /* KPCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCollectionHeaderView.m; sourceTree = "<group>"; };
-		63D378BB1DCF844900F4FF52 /* KPCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPCollectionHeaderView.xib; sourceTree = "<group>"; };
-=======
-=======
->>>>>>> e242ca31d596594a50041a72a8655e4641e7d001
 		638785F81DD01F8200D80086 /* KPAddGoodsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAddGoodsDetailViewController.h; sourceTree = "<group>"; };
 		638785F91DD01F8200D80086 /* KPAddGoodsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPAddGoodsDetailViewController.m; sourceTree = "<group>"; };
 		638785FA1DD01F8200D80086 /* KPAddGoodsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPAddGoodsDetailViewController.xib; sourceTree = "<group>"; };
@@ -525,10 +499,6 @@
 		6387861C1DD060B900D80086 /* KPNewGoodsBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPNewGoodsBaseCell.m; sourceTree = "<group>"; };
 		6387861E1DD07E2A00D80086 /* UIImage+KPColorToImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KPColorToImage.h"; sourceTree = "<group>"; };
 		6387861F1DD07E2A00D80086 /* UIImage+KPColorToImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KPColorToImage.m"; sourceTree = "<group>"; };
-<<<<<<< HEAD
->>>>>>> e242ca31d596594a50041a72a8655e4641e7d001
-=======
->>>>>>> e242ca31d596594a50041a72a8655e4641e7d001
 		EA1BA28F1DC6D87900372467 /* KPDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPDownload.h; sourceTree = "<group>"; };
 		EA1BA2901DC6D87900372467 /* KPDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPDownload.m; sourceTree = "<group>"; };
 		EA1BA2951DC6D92900372467 /* KPRequestURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPRequestURL.h; sourceTree = "<group>"; };
@@ -1248,6 +1218,7 @@
 		632688E31DCB0D8A00C23923 /* 商品管相关视图 */ = {
 			isa = PBXGroup;
 			children = (
+				637E1B7F1DCCA596001C5A6E /* 商品管理第三个界面 */,
 				632688E41DCB0DF800C23923 /* KPGoodsShowCell.h */,
 				632688E51DCB0DF800C23923 /* KPGoodsShowCell.m */,
 				632688E61DCB0DF800C23923 /* KPGoodsShowCell.xib */,
@@ -1260,9 +1231,6 @@
 				637E1B6D1DCC3CDE001C5A6E /* KPNearHotCell.h */,
 				637E1B6E1DCC3CDE001C5A6E /* KPNearHotCell.m */,
 				637E1B6F1DCC3CDE001C5A6E /* KPNearHotCell.xib */,
-				63D378B91DCF844900F4FF52 /* KPCollectionHeaderView.h */,
-				63D378BA1DCF844900F4FF52 /* KPCollectionHeaderView.m */,
-				63D378BB1DCF844900F4FF52 /* KPCollectionHeaderView.xib */,
 			);
 			name = "商品管相关视图";
 			sourceTree = "<group>";
@@ -1272,8 +1240,6 @@
 			children = (
 				632688EA1DCB15E000C23923 /* KPGoodSellModel.h */,
 				632688EB1DCB15E000C23923 /* KPGoodSellModel.m */,
-				63D378B11DCF68F700F4FF52 /* KPSelectModel.h */,
-				63D378B21DCF68F700F4FF52 /* KPSelectModel.m */,
 			);
 			name = "商品管理models";
 			sourceTree = "<group>";
@@ -1621,7 +1587,6 @@
 			children = (
 				638785FD1DD0207100D80086 /* 新增商品和编辑页 */,
 				632688E91DCB15C400C23923 /* 商品管理models */,
-				637E1B7F1DCCA596001C5A6E /* 商品管理第三个界面 */,
 				632688E31DCB0D8A00C23923 /* 商品管相关视图 */,
 				EA31DA751DB5F6EA003B2BD6 /* GoodsVC.h */,
 				EA31DA761DB5F6EA003B2BD6 /* GoodsVC.m */,
@@ -1630,9 +1595,6 @@
 				637E1B721DCC826A001C5A6E /* KPGoodsSearchViewController.h */,
 				637E1B731DCC826A001C5A6E /* KPGoodsSearchViewController.m */,
 				637E1B741DCC826A001C5A6E /* KPGoodsSearchViewController.xib */,
-				63D378B41DCF7DCD00F4FF52 /* KPNewGoodsSelectsVC.h */,
-				63D378B51DCF7DCD00F4FF52 /* KPNewGoodsSelectsVC.m */,
-				63D378B61DCF7DCD00F4FF52 /* KPNewGoodsSelectsVC.xib */,
 			);
 			path = Goods;
 			sourceTree = "<group>";
@@ -2213,13 +2175,11 @@
 				EA31DAF31DB5FF1E003B2BD6 /* 购物车@2x.png in Resources */,
 				EA23B2381DC5C99B00F85602 /* Tabbar_首页_选中@2x.png in Resources */,
 				EA23B2351DC5C99B00F85602 /* Tabbar_商品管理_未选中@2x.png in Resources */,
-				63D378BD1DCF844900F4FF52 /* KPCollectionHeaderView.xib in Resources */,
 				EA31DADF1DB5FF1E003B2BD6 /* nva_muen.png in Resources */,
 				637E1B6C1DCC3AD4001C5A6E /* KPGoodsNoDatasView.xib in Resources */,
 				EA31DADC1DB5FF1E003B2BD6 /* nav_back.png in Resources */,
 				EA23B2241DC5C99B00F85602 /* 首页_冠军商品.png in Resources */,
 				637E1B711DCC3CDE001C5A6E /* KPNearHotCell.xib in Resources */,
-				63D378B81DCF7DCD00F4FF52 /* KPNewGoodsSelectsVC.xib in Resources */,
 				EA31DADD1DB5FF1E003B2BD6 /* nav_message.png in Resources */,
 				638786111DD0248600D80086 /* KPAddGoodsSelectCell.xib in Resources */,
 				EA23B2291DC5C99B00F85602 /* 提现.png in Resources */,
@@ -2328,7 +2288,6 @@
 				EA31DC2C1DB5FFCB003B2BD6 /* UIProgressView+AFNetworking.m in Sources */,
 				08F12F5B1DBE32F700CA9535 /* KPAccountViewController.m in Sources */,
 				EA31DC681DB5FFCB003B2BD6 /* SDWebImageCompat.m in Sources */,
-				63D378B71DCF7DCD00F4FF52 /* KPNewGoodsSelectsVC.m in Sources */,
 				08F12EE51DB9E77F00CA9535 /* KPZiJinTableViewCell.m in Sources */,
 				0836A6E71DC9DA880029441D /* KPFenChengViewController.m in Sources */,
 				EA7E8A8E1DBBC56E008DC3EB /* IQTextView.m in Sources */,
@@ -2406,7 +2365,6 @@
 				EA23B29E1DC6031000F85602 /* ShouHouModel.m in Sources */,
 				08A2A4481DC8865300BD9BCD /* KPWeiJieHeaderView.m in Sources */,
 				EA31DC471DB5FFCB003B2BD6 /* NSString+Hashing.m in Sources */,
-				63D378B31DCF68F700F4FF52 /* KPSelectModel.m in Sources */,
 				08F12E7F1DB8C1BE00CA9535 /* KPDianPuxiangqingViewController.m in Sources */,
 				08DC2B361DBF3CEB008DEF30 /* KPMingXiTableViewCell.m in Sources */,
 				08F12F491DBDEC4400CA9535 /* KPWoDeHeardView.m in Sources */,
@@ -2499,7 +2457,6 @@
 				086FD72C1DC831FA001054DB /* KPYiQueRenTableViewCell.m in Sources */,
 				EA31DC2B1DB5FFCB003B2BD6 /* UIImageView+AFNetworking.m in Sources */,
 				EA31DA6F1DB5F69F003B2BD6 /* ShouYeVC.m in Sources */,
-				63D378BC1DCF844900F4FF52 /* KPCollectionHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
