@@ -89,6 +89,20 @@
 		637E1B7E1DCCA1B0001C5A6E /* KPNewGoodsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637E1B7D1DCCA1B0001C5A6E /* KPNewGoodsView.xib */; };
 		637E1B831DCCA844001C5A6E /* KPGoodsThirdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 637E1B811DCCA844001C5A6E /* KPGoodsThirdCell.m */; };
 		637E1B841DCCA844001C5A6E /* KPGoodsThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637E1B821DCCA844001C5A6E /* KPGoodsThirdCell.xib */; };
+		638785FB1DD01F8200D80086 /* KPAddGoodsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638785F91DD01F8200D80086 /* KPAddGoodsDetailViewController.m */; };
+		638785FC1DD01F8200D80086 /* KPAddGoodsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638785FA1DD01F8200D80086 /* KPAddGoodsDetailViewController.xib */; };
+		638786011DD021E700D80086 /* KPAddGoodsEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 638785FF1DD021E700D80086 /* KPAddGoodsEditCell.m */; };
+		638786021DD021E700D80086 /* KPAddGoodsEditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638786001DD021E700D80086 /* KPAddGoodsEditCell.xib */; };
+		638786061DD022AA00D80086 /* KPAddGoodsSimpleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 638786041DD022AA00D80086 /* KPAddGoodsSimpleCell.m */; };
+		638786071DD022AA00D80086 /* KPAddGoodsSimpleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638786051DD022AA00D80086 /* KPAddGoodsSimpleCell.xib */; };
+		6387860B1DD022D100D80086 /* KPAddGoodsImageShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 638786091DD022D100D80086 /* KPAddGoodsImageShowCell.m */; };
+		6387860C1DD022D100D80086 /* KPAddGoodsImageShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6387860A1DD022D100D80086 /* KPAddGoodsImageShowCell.xib */; };
+		638786101DD0248600D80086 /* KPAddGoodsSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6387860E1DD0248600D80086 /* KPAddGoodsSelectCell.m */; };
+		638786111DD0248600D80086 /* KPAddGoodsSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6387860F1DD0248600D80086 /* KPAddGoodsSelectCell.xib */; };
+		638786141DD027D600D80086 /* KPGoodsCommonButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 638786131DD027D600D80086 /* KPGoodsCommonButton.m */; };
+		6387861A1DD0337500D80086 /* KPNewGoodsCellTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 638786191DD0337500D80086 /* KPNewGoodsCellTypeModel.m */; };
+		6387861D1DD060B900D80086 /* KPNewGoodsBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6387861C1DD060B900D80086 /* KPNewGoodsBaseCell.m */; };
+		638786201DD07E2A00D80086 /* UIImage+KPColorToImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6387861F1DD07E2A00D80086 /* UIImage+KPColorToImage.m */; };
 		EA1BA2911DC6D87900372467 /* KPDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1BA2901DC6D87900372467 /* KPDownload.m */; };
 		EA1BA2971DC6DC9A00372467 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1BA2961DC6DC9A00372467 /* logo.png */; };
 		EA1BA29C1DC6E25100372467 /* AFAppDotNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1BA2991DC6E25100372467 /* AFAppDotNetAPIClient.m */; };
@@ -462,6 +476,29 @@
 		637E1B801DCCA844001C5A6E /* KPGoodsThirdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGoodsThirdCell.h; sourceTree = "<group>"; };
 		637E1B811DCCA844001C5A6E /* KPGoodsThirdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGoodsThirdCell.m; sourceTree = "<group>"; };
 		637E1B821DCCA844001C5A6E /* KPGoodsThirdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPGoodsThirdCell.xib; sourceTree = "<group>"; };
+		638785F81DD01F8200D80086 /* KPAddGoodsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAddGoodsDetailViewController.h; sourceTree = "<group>"; };
+		638785F91DD01F8200D80086 /* KPAddGoodsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPAddGoodsDetailViewController.m; sourceTree = "<group>"; };
+		638785FA1DD01F8200D80086 /* KPAddGoodsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPAddGoodsDetailViewController.xib; sourceTree = "<group>"; };
+		638785FE1DD021E700D80086 /* KPAddGoodsEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAddGoodsEditCell.h; sourceTree = "<group>"; };
+		638785FF1DD021E700D80086 /* KPAddGoodsEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPAddGoodsEditCell.m; sourceTree = "<group>"; };
+		638786001DD021E700D80086 /* KPAddGoodsEditCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPAddGoodsEditCell.xib; sourceTree = "<group>"; };
+		638786031DD022AA00D80086 /* KPAddGoodsSimpleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAddGoodsSimpleCell.h; sourceTree = "<group>"; };
+		638786041DD022AA00D80086 /* KPAddGoodsSimpleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPAddGoodsSimpleCell.m; sourceTree = "<group>"; };
+		638786051DD022AA00D80086 /* KPAddGoodsSimpleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPAddGoodsSimpleCell.xib; sourceTree = "<group>"; };
+		638786081DD022D100D80086 /* KPAddGoodsImageShowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAddGoodsImageShowCell.h; sourceTree = "<group>"; };
+		638786091DD022D100D80086 /* KPAddGoodsImageShowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPAddGoodsImageShowCell.m; sourceTree = "<group>"; };
+		6387860A1DD022D100D80086 /* KPAddGoodsImageShowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPAddGoodsImageShowCell.xib; sourceTree = "<group>"; };
+		6387860D1DD0248600D80086 /* KPAddGoodsSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAddGoodsSelectCell.h; sourceTree = "<group>"; };
+		6387860E1DD0248600D80086 /* KPAddGoodsSelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPAddGoodsSelectCell.m; sourceTree = "<group>"; };
+		6387860F1DD0248600D80086 /* KPAddGoodsSelectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPAddGoodsSelectCell.xib; sourceTree = "<group>"; };
+		638786121DD027D600D80086 /* KPGoodsCommonButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGoodsCommonButton.h; sourceTree = "<group>"; };
+		638786131DD027D600D80086 /* KPGoodsCommonButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGoodsCommonButton.m; sourceTree = "<group>"; };
+		638786181DD0337500D80086 /* KPNewGoodsCellTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPNewGoodsCellTypeModel.h; sourceTree = "<group>"; };
+		638786191DD0337500D80086 /* KPNewGoodsCellTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPNewGoodsCellTypeModel.m; sourceTree = "<group>"; };
+		6387861B1DD060B900D80086 /* KPNewGoodsBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPNewGoodsBaseCell.h; sourceTree = "<group>"; };
+		6387861C1DD060B900D80086 /* KPNewGoodsBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPNewGoodsBaseCell.m; sourceTree = "<group>"; };
+		6387861E1DD07E2A00D80086 /* UIImage+KPColorToImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KPColorToImage.h"; sourceTree = "<group>"; };
+		6387861F1DD07E2A00D80086 /* UIImage+KPColorToImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KPColorToImage.m"; sourceTree = "<group>"; };
 		EA1BA28F1DC6D87900372467 /* KPDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPDownload.h; sourceTree = "<group>"; };
 		EA1BA2901DC6D87900372467 /* KPDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPDownload.m; sourceTree = "<group>"; };
 		EA1BA2951DC6D92900372467 /* KPRequestURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPRequestURL.h; sourceTree = "<group>"; };
@@ -1220,6 +1257,36 @@
 			name = "商品管理第三个界面";
 			sourceTree = "<group>";
 		};
+		638785FD1DD0207100D80086 /* 新增商品和编辑页 */ = {
+			isa = PBXGroup;
+			children = (
+				638785F81DD01F8200D80086 /* KPAddGoodsDetailViewController.h */,
+				638785F91DD01F8200D80086 /* KPAddGoodsDetailViewController.m */,
+				638785FA1DD01F8200D80086 /* KPAddGoodsDetailViewController.xib */,
+				638785FE1DD021E700D80086 /* KPAddGoodsEditCell.h */,
+				638785FF1DD021E700D80086 /* KPAddGoodsEditCell.m */,
+				638786001DD021E700D80086 /* KPAddGoodsEditCell.xib */,
+				638786031DD022AA00D80086 /* KPAddGoodsSimpleCell.h */,
+				638786041DD022AA00D80086 /* KPAddGoodsSimpleCell.m */,
+				638786051DD022AA00D80086 /* KPAddGoodsSimpleCell.xib */,
+				638786081DD022D100D80086 /* KPAddGoodsImageShowCell.h */,
+				638786091DD022D100D80086 /* KPAddGoodsImageShowCell.m */,
+				6387860A1DD022D100D80086 /* KPAddGoodsImageShowCell.xib */,
+				6387860D1DD0248600D80086 /* KPAddGoodsSelectCell.h */,
+				6387860E1DD0248600D80086 /* KPAddGoodsSelectCell.m */,
+				6387860F1DD0248600D80086 /* KPAddGoodsSelectCell.xib */,
+				638786121DD027D600D80086 /* KPGoodsCommonButton.h */,
+				638786131DD027D600D80086 /* KPGoodsCommonButton.m */,
+				638786181DD0337500D80086 /* KPNewGoodsCellTypeModel.h */,
+				638786191DD0337500D80086 /* KPNewGoodsCellTypeModel.m */,
+				6387861B1DD060B900D80086 /* KPNewGoodsBaseCell.h */,
+				6387861C1DD060B900D80086 /* KPNewGoodsBaseCell.m */,
+				6387861E1DD07E2A00D80086 /* UIImage+KPColorToImage.h */,
+				6387861F1DD07E2A00D80086 /* UIImage+KPColorToImage.m */,
+			);
+			name = "新增商品和编辑页";
+			sourceTree = "<group>";
+		};
 		EA1BA28B1DC6D84000372467 /* request */ = {
 			isa = PBXGroup;
 			children = (
@@ -1518,6 +1585,7 @@
 		EA31DA741DB5F6EA003B2BD6 /* Goods */ = {
 			isa = PBXGroup;
 			children = (
+				638785FD1DD0207100D80086 /* 新增商品和编辑页 */,
 				632688E91DCB15C400C23923 /* 商品管理models */,
 				632688E31DCB0D8A00C23923 /* 商品管相关视图 */,
 				EA31DA751DB5F6EA003B2BD6 /* GoodsVC.h */,
@@ -2113,10 +2181,12 @@
 				EA23B2241DC5C99B00F85602 /* 首页_冠军商品.png in Resources */,
 				637E1B711DCC3CDE001C5A6E /* KPNearHotCell.xib in Resources */,
 				EA31DADD1DB5FF1E003B2BD6 /* nav_message.png in Resources */,
+				638786111DD0248600D80086 /* KPAddGoodsSelectCell.xib in Resources */,
 				EA23B2291DC5C99B00F85602 /* 提现.png in Resources */,
 				EA31DAE11DB5FF1E003B2BD6 /* scan_box@2x.png in Resources */,
 				EA1BA2A51DC7462D00372467 /* headNav_Gray.png in Resources */,
 				EA23B2321DC5C99B00F85602 /* 营业中.png in Resources */,
+				6387860C1DD022D100D80086 /* KPAddGoodsImageShowCell.xib in Resources */,
 				EA23B21D1DC5C99B00F85602 /* 个人中心_关注二维码@2x.png in Resources */,
 				EA31DAFE1DB5FF1E003B2BD6 /* 设备锁定@2x.png in Resources */,
 				EA31DAD81DB5FF1E003B2BD6 /* main_等级_02.png in Resources */,
@@ -2128,6 +2198,7 @@
 				632688E81DCB0DF800C23923 /* KPGoodsShowCell.xib in Resources */,
 				EA23B2181DC5C99B00F85602 /* 48.png in Resources */,
 				EA31DAEC1DB5FF1E003B2BD6 /* E@2x.png in Resources */,
+				638785FC1DD01F8200D80086 /* KPAddGoodsDetailViewController.xib in Resources */,
 				EA31DAF11DB5FF1E003B2BD6 /* 编辑地址.png in Resources */,
 				EA31DACE1DB5FF1E003B2BD6 /* buton_2_highlighted.png in Resources */,
 				EA31DB021DB5FF1E003B2BD6 /* 评价_回复@2x.png in Resources */,
@@ -2153,6 +2224,7 @@
 				EA31DAD71DB5FF1E003B2BD6 /* main_等级_01.png in Resources */,
 				EA23B2201DC5C99B00F85602 /* 个人中心_营业规则.png in Resources */,
 				EA31DB041DB5FF1E003B2BD6 /* 评价晒单.png in Resources */,
+				638786021DD021E700D80086 /* KPAddGoodsEditCell.xib in Resources */,
 				EA23B21B1DC5C99B00F85602 /* 个人中心_帮助中心.png in Resources */,
 				EA23B23B1DC5C99B00F85602 /* Tabbar_我的_未选中@2x.png in Resources */,
 				EA31DAEE1DB5FF1E003B2BD6 /* 分享@2x.png in Resources */,
@@ -2162,6 +2234,7 @@
 				EA31DACD1DB5FF1E003B2BD6 /* buton_2.png in Resources */,
 				EA23B25F1DC602C200F85602 /* Info.plist in Resources */,
 				EA23B2231DC5C99B00F85602 /* 取消.png in Resources */,
+				638786071DD022AA00D80086 /* KPAddGoodsSimpleCell.xib in Resources */,
 				EA31DAE91DB5FF1E003B2BD6 /* C_S@2x.png in Resources */,
 				EA23B2261DC5C99B00F85602 /* 首页_银牌商品.png in Resources */,
 				EA31DAD61DB5FF1E003B2BD6 /* kaopu.png in Resources */,
@@ -2198,6 +2271,7 @@
 				EA31DC731DB5FFCB003B2BD6 /* UIView+WebCacheOperation.m in Sources */,
 				EA31DC2D1DB5FFCB003B2BD6 /* UIRefreshControl+AFNetworking.m in Sources */,
 				08F12F611DBF1F6800CA9535 /* KPHuiYuanTableViewCell.m in Sources */,
+				638786101DD0248600D80086 /* KPAddGoodsSelectCell.m in Sources */,
 				EA31DC6D1DB5FFCB003B2BD6 /* SDWebImagePrefetcher.m in Sources */,
 				EA7E8A8B1DBBC56E008DC3EB /* IQUIWindow+Hierarchy.m in Sources */,
 				086FD72F1DC8477E001054DB /* KPTuiKuanTableViewCell.m in Sources */,
@@ -2254,6 +2328,8 @@
 				EA31DC511DB5FFCB003B2BD6 /* MJRefreshBackNormalFooter.m in Sources */,
 				08B842EB1DC6E5C50015755F /* OrderHeadView.m in Sources */,
 				EA967CA51DC50A9A0063B872 /* KPErWeiMaView.m in Sources */,
+				638786201DD07E2A00D80086 /* UIImage+KPColorToImage.m in Sources */,
+				638786011DD021E700D80086 /* KPAddGoodsEditCell.m in Sources */,
 				637E1B831DCCA844001C5A6E /* KPGoodsThirdCell.m in Sources */,
 				08DC2B9A1DC3160B008DEF30 /* KPFaPiaoSheDingTableViewCell.m in Sources */,
 				EA31DC2A1DB5FFCB003B2BD6 /* UIButton+AFNetworking.m in Sources */,
@@ -2279,6 +2355,7 @@
 				08F12F571DBE2A8900CA9535 /* KPChongZhiViewController.m in Sources */,
 				EA23B29F1DC6031000F85602 /* ShouHouScrollViewModel.m in Sources */,
 				08DC2B3A1DBF50CE008DEF30 /* KPJinZhangXQViewController.m in Sources */,
+				6387861A1DD0337500D80086 /* KPNewGoodsCellTypeModel.m in Sources */,
 				632688E71DCB0DF800C23923 /* KPGoodsShowCell.m in Sources */,
 				08F12E741DB8964D00CA9535 /* KPPersonView.m in Sources */,
 				632688EF1DCB3BAA00C23923 /* KPGoodsEditView.m in Sources */,
@@ -2299,6 +2376,7 @@
 				EA31DC4B1DB5FFCB003B2BD6 /* MJRefreshFooter.m in Sources */,
 				08F12E5C1DB87A5000CA9535 /* KPDistributionViewController.m in Sources */,
 				EA31DC591DB5FFCB003B2BD6 /* UIScrollView+MJRefresh.m in Sources */,
+				638786061DD022AA00D80086 /* KPAddGoodsSimpleCell.m in Sources */,
 				08F12E781DB8BFB900CA9535 /* KPZiJinViewController.m in Sources */,
 				EA31DC4E1DB5FFCB003B2BD6 /* MJRefreshAutoNormalFooter.m in Sources */,
 				08F12F461DBD974200CA9535 /* KPZhuYingTableViewCell.m in Sources */,
@@ -2330,6 +2408,7 @@
 				EA31DC6E1DB5FFCB003B2BD6 /* UIButton+WebCache.m in Sources */,
 				08DC2B701DC073CA008DEF30 /* KPTianJiaSuccessViewController.m in Sources */,
 				08F12E6E1DB87C5F00CA9535 /* KPZhangHaoViewController.m in Sources */,
+				638785FB1DD01F8200D80086 /* KPAddGoodsDetailViewController.m in Sources */,
 				EA31DC8C1DB60537003B2BD6 /* KPBaseVC.m in Sources */,
 				EA7E8A921DBBC56E008DC3EB /* IQToolbar.m in Sources */,
 				086FD7321DC863E1001054DB /* KPZiXingPeiSongTableViewCell.m in Sources */,
@@ -2341,6 +2420,7 @@
 				EA23B2A01DC6031000F85602 /* ShouHouTableViewCell.m in Sources */,
 				08F12E681DB87C4000CA9535 /* KPDianPuViewController.m in Sources */,
 				EA31DC261DB5FFCB003B2BD6 /* AFAutoPurgingImageCache.m in Sources */,
+				638786141DD027D600D80086 /* KPGoodsCommonButton.m in Sources */,
 				EA31DC6B1DB5FFCB003B2BD6 /* SDWebImageDownloaderOperation.m in Sources */,
 				EA31DC671DB5FFCB003B2BD6 /* SDImageCache.m in Sources */,
 				08DC2B731DC07E2E008DEF30 /* KPBangDingKaViewController.m in Sources */,
@@ -2350,6 +2430,7 @@
 				EA23B2991DC6031000F85602 /* SHWaitProcessController.m in Sources */,
 				08DC2B6A1DC04C75008DEF30 /* KPTianJYHKViewController.m in Sources */,
 				EA31DA5A1DB5F676003B2BD6 /* AppDelegate.m in Sources */,
+				6387861D1DD060B900D80086 /* KPNewGoodsBaseCell.m in Sources */,
 				08B842E21DC6E2080015755F /* KPYiJieViewController.m in Sources */,
 				EA31DA831DB5F734003B2BD6 /* PersonVC.m in Sources */,
 				EA23B2641DC602C200F85602 /* MASViewAttribute.m in Sources */,
@@ -2364,6 +2445,7 @@
 				EA31DA571DB5F676003B2BD6 /* main.m in Sources */,
 				EA1BA29D1DC6E25100372467 /* KPRequest.m in Sources */,
 				637E1B751DCC826A001C5A6E /* KPGoodsSearchViewController.m in Sources */,
+				6387860B1DD022D100D80086 /* KPAddGoodsImageShowCell.m in Sources */,
 				EA23B29A1DC6031000F85602 /* ShouHouVC.m in Sources */,
 				EA31DC5B1DB5FFCB003B2BD6 /* NSString+URLEncoding.m in Sources */,
 				EA31DC211DB5FFCB003B2BD6 /* AFNetworkReachabilityManager.m in Sources */,
@@ -2492,6 +2574,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 73W5STJ9E9;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BKaoPush/Tools/KPPCH.pch";
 				INFOPLIST_FILE = BKaoPush/Info.plist;
@@ -2504,7 +2587,7 @@
 					"$(PROJECT_DIR)/BKaoPush/libs/测试二维码",
 					"$(PROJECT_DIR)/BKaoPush/libs/erWeiMa",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = KaoPu.BKaoPush.1;
+				PRODUCT_BUNDLE_IDENTIFIER = KaoPu.BKaoPush.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -2513,6 +2596,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 73W5STJ9E9;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BKaoPush/Tools/KPPCH.pch";
 				INFOPLIST_FILE = BKaoPush/Info.plist;
@@ -2525,7 +2609,7 @@
 					"$(PROJECT_DIR)/BKaoPush/libs/测试二维码",
 					"$(PROJECT_DIR)/BKaoPush/libs/erWeiMa",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = KaoPu.BKaoPush.1;
+				PRODUCT_BUNDLE_IDENTIFIER = KaoPu.BKaoPush.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
