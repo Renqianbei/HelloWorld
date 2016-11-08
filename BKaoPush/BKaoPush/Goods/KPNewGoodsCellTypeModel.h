@@ -24,6 +24,7 @@
 @property(nonatomic,strong)NSMutableSet * selectContents;//被选中的内容
 @property(nonatomic,assign)BOOL  allowMutSelect;//是否允许多选 默认为NO 只有内存允许多选
 
+@property(nonatomic,copy)NSString*  topToView;//设置button和title到顶部的距离 默认不传为默认距离
 //ImageShowCellID 专用
 @property(nonatomic,strong)NSArray * imageUrls;
 

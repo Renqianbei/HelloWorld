@@ -6,11 +6,12 @@
 //  Copyright © 2016年 shanghai kaoPush. All rights reserved.
 //
 
-#import "KPAddGoodsDetailViewController.h"
+#import "KPMutAddGoodsDetailViewController.h"
 #import "KPAddGoodsEditCell.h"
 #import "KPAddGoodsSimpleCell.h"
 #import "KPAddGoodsImageShowCell.h"
 #import "KPAddGoodsSelectCell.h"
+#import "KPAddGoodsRedNoticeCell.h"
 #import "KPNewGoodsCellTypeModel.h"
 #import "UIImage+KPColorToImage.h"
 
@@ -18,9 +19,9 @@ static  NSString * EditCellID = @"EditCellID";
 static  NSString * SimpleCellID = @"SimpleCellID";
 static  NSString * ImageShowCellID = @"ImageShowCellID";
 static  NSString * SelectCellID = @"SelectCellID";
+static NSString  * RedNoticeID = @"RedNoticeID";
 
-
-@interface KPAddGoodsDetailViewController ()<UITableViewDelegate,UITableViewDataSource,NewAddGoodsCellDelegate>
+@interface KPMutAddGoodsDetailViewController ()<UITableViewDelegate,UITableViewDataSource,NewAddGoodsCellDelegate>
 
 @property(nonatomic,strong)UIButton * bigImageView;
 @property(nonatomic,assign)CGRect startFrame;
@@ -30,7 +31,7 @@ static  NSString * SelectCellID = @"SelectCellID";
 
 @end
 
-@implementation KPAddGoodsDetailViewController
+@implementation KPMutAddGoodsDetailViewController
 
 - (UIButton *)bigImageView{
     
@@ -58,6 +59,7 @@ static  NSString * SelectCellID = @"SelectCellID";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([KPAddGoodsSimpleCell class]) bundle:nil] forCellReuseIdentifier:SimpleCellID];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([KPAddGoodsImageShowCell class]) bundle:nil] forCellReuseIdentifier:ImageShowCellID];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([KPAddGoodsSelectCell class]) bundle:nil] forCellReuseIdentifier:SelectCellID];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([KPAddGoodsRedNoticeCell class]) bundle:nil] forCellReuseIdentifier:RedNoticeID];
 
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 50;
@@ -74,27 +76,47 @@ static  NSString * SelectCellID = @"SelectCellID";
         row2.imageUrls = @[@"图片url1",@"图片url2",@"图片url2",@"图片url2",@"图片url2",@"图片url2",@"图片url2"];
     KPNewGoodsCellTypeModel * row3 = [KPNewGoodsCellTypeModel modelWithCellID:EditCellID title:@"描述" content:@"" placehHoderContent:@"请填写一句话描述(选填)"];
     row3.isOption = YES;//选填
+    
     KPNewGoodsCellTypeModel * row4 = [KPNewGoodsCellTypeModel modelWithCellID:SelectCellID title:@"颜色" content:@""];
     row4.contents = @[@"金色",@"银色",@"黑色",@"升空会",@"玫瑰金",@"哈哈哈"];
+    row4.allowMutSelect = YES;//允许多选
+    row4.topToView = @"25";//因为这行距离顶部边界 效果要看起来多一点
+
     KPNewGoodsCellTypeModel * row5 = [KPNewGoodsCellTypeModel modelWithCellID:SelectCellID title:@"内存" content:@""];
-//    row5.allowMutSelect = YES;//允许多选 现在都不能多选
+    row5.allowMutSelect = YES;//允许多选
     row5.contents = @[@"16G",@"32G",@"64G"];
+    
+    
     KPNewGoodsCellTypeModel * row6 = [KPNewGoodsCellTypeModel modelWithCellID:SelectCellID title:@"网络" content:@""];
     row6.contents = @[@"连通4G",@"移动4G",@"电信4G"];
+    row6.allowMutSelect = YES;//允许多选
+    
+    
     KPNewGoodsCellTypeModel * row7 = [KPNewGoodsCellTypeModel modelWithCellID:EditCellID title:@"价格" content:@"" placehHoderContent:@"请设置价格"];
     row7.keyboardType = UIKeyboardTypeNumberPad;
+    
+    
     KPNewGoodsCellTypeModel * row8 = [KPNewGoodsCellTypeModel modelWithCellID:EditCellID title:@"数量" content:@"" placehHoderContent:@"请设置数量"];
     row8.keyboardType = UIKeyboardTypeNumberPad;
 
     KPNewGoodsCellTypeModel * row9 = [KPNewGoodsCellTypeModel modelWithCellID:SimpleCellID title:@"重量" content:@"500克"];
+    
+    
     KPNewGoodsCellTypeModel * row10 = [KPNewGoodsCellTypeModel modelWithCellID:SimpleCellID title:@"商品描述" content:@"pweihfpwpifipweqjfpo发文件反馈及问佛款未付金额外婆看附件为破解分配我看见风味咖啡"];
 
+    
+    KPNewGoodsCellTypeModel * redNoticeRow = [KPNewGoodsCellTypeModel modelWithCellID:RedNoticeID title:nil content:@"选择多个商品属性后请在价格，数量中点击分别设置，进行分别设置。如不进行设置商品将使用统一价格及数量。"];
+    redNoticeRow.isOption = YES;//不影响 提交上架按钮可点判断
+    
     [_cellModels addObject:row1];
     [_cellModels addObject:row2];
     [_cellModels addObject:row3];
     [_cellModels addObject:row4];
     [_cellModels addObject:row5];
     [_cellModels addObject:row6];
+    
+    [_cellModels addObject:redNoticeRow];
+    
     [_cellModels addObject:row7];
     [_cellModels addObject:row8];
     [_cellModels addObject:row9];
@@ -123,7 +145,7 @@ static  NSString * SelectCellID = @"SelectCellID";
     KPNewGoodsCellTypeModel * model = _cellModels[indexPath.row];
     
     KPNewGoodsBaseCell * cell = [tableView dequeueReusableCellWithIdentifier:model.CellID forIndexPath:indexPath];
-    if (indexPath.row < 2 || ( indexPath.row>2&&indexPath.row<5)) {
+    if (indexPath.row < 2 || ( indexPath.row>2&&indexPath.row<6)) {
         cell.separatorInset = UIEdgeInsetsMake(0, tableView.frame.size.width, 0, 0);//隐藏分割线
     }else{
         cell.separatorInset = UIEdgeInsetsMake(0, 12, 0, 0);//显示
@@ -151,14 +173,14 @@ static  NSString * SelectCellID = @"SelectCellID";
     }
     
     NSMutableArray * indexs = [NSMutableArray array];
-        for (int i = 6; i<8; i++) {
+        for (int i = 7; i<9; i++) {// 修改 8 9 行显示分别设置的状态
             KPNewGoodsCellTypeModel * model = _cellModels[i];
             model.showButton = ret;//多选就显示分别设置按钮 没有多选就不显示
             [indexs addObject:[NSIndexPath indexPathForRow:i  inSection:0]];
         }
     
     //刷新视图
-    [self.tableView reloadRowsAtIndexPaths:indexs withRowAnimation:UITableViewRowAnimationNone];
+    [self.tableView reloadData];
     [self refreshSubmitButtonStatus];
 
 }

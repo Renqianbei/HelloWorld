@@ -12,5 +12,7 @@
 @interface KPAddGoodsSelectCell : KPNewGoodsBaseCell
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *ToTopConstrant;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *toBottomConstrant;
 
 @end

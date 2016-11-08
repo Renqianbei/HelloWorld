@@ -8,8 +8,7 @@
 
 #import "KPBaseVC.h"
 #import "KPSelectModel.h"
-
-//新增商品页  单选
-@interface KPAddGoodsDetailViewController : KPBaseVC
+//新增商品页  多选
+@interface KPMutAddGoodsDetailViewController : KPBaseVC
     @property(nonatomic,strong)KPSelectModel * model;
 @end

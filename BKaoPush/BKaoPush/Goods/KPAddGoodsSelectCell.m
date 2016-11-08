@@ -20,7 +20,7 @@
 }
 -(void)refreshView{
     self.title.text = self.model.title;
-    
+    self.ToTopConstrant.constant = self.model.topToView?[self.model.topToView floatValue]:10;
     //清除原来的图片
     NSArray * subViews = self.scrollView.subviews;
     for (UIView * sub in  subViews) {

@@ -8,7 +8,7 @@
 
 #import "KPGoodsEditView.h"
 #define  SubViewImageHeight 60    //去xib上看
-
+#define  SubViewHeight  363     //底部视图高度   去xib上看
 @interface KPGoodsEditView()<UITextFieldDelegate>
 @property(nonatomic,strong)void(^clickSure)();
 @property (weak, nonatomic) IBOutlet UILabel *title;
@@ -41,13 +41,15 @@
     editowner.sureButton.layer.masksToBounds = YES;
     [editowner refreshView];//给视图添加文字
     
+    CGRect frame = editowner.view.frame;
+    frame.size.width = editowner.frame.size.width;
     //计算可变行的高度 如果超过图片高度以图片为准
     CGSize size = [KPTool stringCGSize:model.title font:L_FONT width:editowner.frame.size.width - 70 - 10 height:500];
     if (size.height > SubViewImageHeight) {
-        CGRect frame = editowner.view.frame;
         frame.size.height  += size.height - SubViewImageHeight + 10;
-        editowner.view.frame = frame;
     }
+    
+        editowner.view.frame = frame;
     
     
     [editowner addSubview:editowner.view];

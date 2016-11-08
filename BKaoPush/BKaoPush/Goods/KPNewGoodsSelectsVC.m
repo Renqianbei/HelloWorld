@@ -10,6 +10,7 @@
 #import "KPGoodsThirdCell.h"
 #import "KPCollectionHeaderView.h"
 #import "KPAddGoodsDetailViewController.h"
+#import "KPMutAddGoodsDetailViewController.h"
 static NSString * collectionCellID = @"cellID";
 static NSString * collectionHeaderId = @"collectionHeaderId";
 @interface KPNewGoodsSelectsVC ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
@@ -55,8 +56,7 @@ static NSString * collectionHeaderId = @"collectionHeaderId";
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    float width = collectionView.frame.size.width;
+    float width = collectionView.frame.size.width - 2*10 ;
     float interval = 10;
     float itemWidth = (width - interval*4)/3;
     
@@ -67,10 +67,11 @@ static NSString * collectionHeaderId = @"collectionHeaderId";
     
     KPSelectModel * model  = self.model.nextModels[indexPath.item];
     
-    KPAddGoodsDetailViewController * vc = [[KPAddGoodsDetailViewController alloc] init];
-    vc.model = model;
-    
-    [self.navigationController pushViewController:vc animated:YES];
+//    KPAddGoodsDetailViewController * vc = [[KPAddGoodsDetailViewController alloc] init];
+//    vc.model = model;
+    KPMutAddGoodsDetailViewController * mutVC = [[KPMutAddGoodsDetailViewController alloc] init]; //可以多选的控制器
+    mutVC.model = model;
+    [self.navigationController pushViewController:mutVC animated:YES];
 }
 
 
