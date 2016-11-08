@@ -7,7 +7,14 @@
 //
 
 #import "KPBaseVC.h"
+#import "KPEditNameCountPriceModel.h"
 
+@protocol EditCountPriceVcSureDelegate <NSObject>
+
+-(void)sureButtonClick:(NSMutableArray *)models;
+
+@end
 @interface KPAddGoodsEditCountAndPriceVC : KPBaseVC
-
+@property(nonatomic,weak)id<EditCountPriceVcSureDelegate>delegate;
+@property (nonatomic,strong)NSMutableArray * cellModels;//数组里是KPEditNameCountPriceModel
 @end

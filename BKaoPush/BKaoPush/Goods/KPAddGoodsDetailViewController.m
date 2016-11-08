@@ -13,7 +13,7 @@
 #import "KPAddGoodsSelectCell.h"
 #import "KPNewGoodsCellTypeModel.h"
 #import "UIImage+KPColorToImage.h"
-
+#import "KPAddResultViewController.h"
 static  NSString * EditCellID = @"EditCellID";
 static  NSString * SimpleCellID = @"SimpleCellID";
 static  NSString * ImageShowCellID = @"ImageShowCellID";
@@ -138,27 +138,6 @@ static  NSString * SelectCellID = @"SelectCellID";
 #pragma mark    CellDelegate  编辑 选择发生改变时 代理
 //需要判断是否有多选  来看是否显示 7 8 行的 分别设置按钮
 -(void)mutSelectStatusChange{
-    
-    //便利  456 行的 model看看是否有多选
-    BOOL ret = NO;
-    for (int i = 3; i < 6; i ++) {
-        KPNewGoodsCellTypeModel * model = _cellModels[i];
-        if (model.selectContents.count > 1) {
-            //有一个多选就是多选了
-            ret = YES;
-            break;
-        }
-    }
-    
-    NSMutableArray * indexs = [NSMutableArray array];
-        for (int i = 6; i<8; i++) {
-            KPNewGoodsCellTypeModel * model = _cellModels[i];
-            model.showButton = ret;//多选就显示分别设置按钮 没有多选就不显示
-            [indexs addObject:[NSIndexPath indexPathForRow:i  inSection:0]];
-        }
-    
-    //刷新视图
-    [self.tableView reloadRowsAtIndexPaths:indexs withRowAnimation:UITableViewRowAnimationNone];
     [self refreshSubmitButtonStatus];
 
 }
@@ -259,11 +238,13 @@ static  NSString * SelectCellID = @"SelectCellID";
     KPNewGoodsCellTypeModel * row8 = _cellModels[7];//数量
     NSString * count = row8.content;
     
-    
-    for (NSString * storage in selectStorage) {
-        NSString * name = [NSString stringWithFormat:@"%@ %@ %@ %@",chanping,selectColors.anyObject,storage,selectNet.anyObject];
+    //因为单选 所以这些选中的集合中只有一个元素
+        NSString * name = [NSString stringWithFormat:@"%@ %@ %@ %@",chanping,selectColors.anyObject,selectStorage.anyObject,selectNet.anyObject];
         NSLog(@"%@'",name);
-    }
+    
+    //跳到结果页
+    KPAddResultViewController *vc = [[KPAddResultViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /*

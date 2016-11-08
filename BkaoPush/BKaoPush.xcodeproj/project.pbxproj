@@ -108,6 +108,11 @@
 		637E1B7E1DCCA1B0001C5A6E /* KPNewGoodsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637E1B7D1DCCA1B0001C5A6E /* KPNewGoodsView.xib */; };
 		637E1B831DCCA844001C5A6E /* KPGoodsThirdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 637E1B811DCCA844001C5A6E /* KPGoodsThirdCell.m */; };
 		637E1B841DCCA844001C5A6E /* KPGoodsThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637E1B821DCCA844001C5A6E /* KPGoodsThirdCell.xib */; };
+		63B5BC911DD1BAD7005C7B8C /* KPNameCountPriceEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B5BC8F1DD1BAD7005C7B8C /* KPNameCountPriceEditCell.m */; };
+		63B5BC921DD1BAD7005C7B8C /* KPNameCountPriceEditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B5BC901DD1BAD7005C7B8C /* KPNameCountPriceEditCell.xib */; };
+		63B5BC951DD1BB1D005C7B8C /* KPEditNameCountPriceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B5BC941DD1BB1D005C7B8C /* KPEditNameCountPriceModel.m */; };
+		63B5BC991DD1D523005C7B8C /* KPAddResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B5BC971DD1D523005C7B8C /* KPAddResultViewController.m */; };
+		63B5BC9A1DD1D523005C7B8C /* KPAddResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B5BC981DD1D523005C7B8C /* KPAddResultViewController.xib */; };
 		63D338BF1DD1783200E060A7 /* KPMutAddGoodsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D338BD1DD1783200E060A7 /* KPMutAddGoodsDetailViewController.m */; };
 		63D338C11DD1785A00E060A7 /* KPMutAddGoodsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D338C01DD1785A00E060A7 /* KPMutAddGoodsDetailViewController.xib */; };
 		63D338C51DD17E8800E060A7 /* KPAddGoodsRedNoticeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D338C31DD17E8800E060A7 /* KPAddGoodsRedNoticeCell.m */; };
@@ -518,6 +523,14 @@
 		637E1B801DCCA844001C5A6E /* KPGoodsThirdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGoodsThirdCell.h; sourceTree = "<group>"; };
 		637E1B811DCCA844001C5A6E /* KPGoodsThirdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGoodsThirdCell.m; sourceTree = "<group>"; };
 		637E1B821DCCA844001C5A6E /* KPGoodsThirdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPGoodsThirdCell.xib; sourceTree = "<group>"; };
+		63B5BC8E1DD1BAD7005C7B8C /* KPNameCountPriceEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPNameCountPriceEditCell.h; sourceTree = "<group>"; };
+		63B5BC8F1DD1BAD7005C7B8C /* KPNameCountPriceEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPNameCountPriceEditCell.m; sourceTree = "<group>"; };
+		63B5BC901DD1BAD7005C7B8C /* KPNameCountPriceEditCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPNameCountPriceEditCell.xib; sourceTree = "<group>"; };
+		63B5BC931DD1BB1D005C7B8C /* KPEditNameCountPriceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPEditNameCountPriceModel.h; sourceTree = "<group>"; };
+		63B5BC941DD1BB1D005C7B8C /* KPEditNameCountPriceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPEditNameCountPriceModel.m; sourceTree = "<group>"; };
+		63B5BC961DD1D523005C7B8C /* KPAddResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAddResultViewController.h; sourceTree = "<group>"; };
+		63B5BC971DD1D523005C7B8C /* KPAddResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPAddResultViewController.m; sourceTree = "<group>"; };
+		63B5BC981DD1D523005C7B8C /* KPAddResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPAddResultViewController.xib; sourceTree = "<group>"; };
 		63D338BD1DD1783200E060A7 /* KPMutAddGoodsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPMutAddGoodsDetailViewController.m; sourceTree = "<group>"; };
 		63D338BE1DD1783200E060A7 /* KPMutAddGoodsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPMutAddGoodsDetailViewController.h; sourceTree = "<group>"; };
 		63D338C01DD1785A00E060A7 /* KPMutAddGoodsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPMutAddGoodsDetailViewController.xib; sourceTree = "<group>"; };
@@ -1329,6 +1342,14 @@
 				63D338C81DD1853400E060A7 /* KPAddGoodsEditCountAndPriceVC.h */,
 				63D338C91DD1853400E060A7 /* KPAddGoodsEditCountAndPriceVC.m */,
 				63D338CA1DD1853400E060A7 /* KPAddGoodsEditCountAndPriceVC.xib */,
+				63B5BC8E1DD1BAD7005C7B8C /* KPNameCountPriceEditCell.h */,
+				63B5BC8F1DD1BAD7005C7B8C /* KPNameCountPriceEditCell.m */,
+				63B5BC901DD1BAD7005C7B8C /* KPNameCountPriceEditCell.xib */,
+				63B5BC931DD1BB1D005C7B8C /* KPEditNameCountPriceModel.h */,
+				63B5BC941DD1BB1D005C7B8C /* KPEditNameCountPriceModel.m */,
+				63B5BC961DD1D523005C7B8C /* KPAddResultViewController.h */,
+				63B5BC971DD1D523005C7B8C /* KPAddResultViewController.m */,
+				63B5BC981DD1D523005C7B8C /* KPAddResultViewController.xib */,
 			);
 			name = "新增商品v 包含单选跟 多选";
 			sourceTree = "<group>";
@@ -2236,6 +2257,7 @@
 				EA23B2241DC5C99B00F85602 /* 首页_冠军商品.png in Resources */,
 				637E1B711DCC3CDE001C5A6E /* KPNearHotCell.xib in Resources */,
 				EA31DADD1DB5FF1E003B2BD6 /* nav_message.png in Resources */,
+				63B5BC9A1DD1D523005C7B8C /* KPAddResultViewController.xib in Resources */,
 				EA23B2291DC5C99B00F85602 /* 提现.png in Resources */,
 				EA31DAE11DB5FF1E003B2BD6 /* scan_box@2x.png in Resources */,
 				EA1BA2A51DC7462D00372467 /* headNav_Gray.png in Resources */,
@@ -2288,6 +2310,7 @@
 				EA31DB061DB5FF1E003B2BD6 /* 未中奖.png in Resources */,
 				6330F3FA1DD0CB6700D8D6DA /* KPNewGoodsSelectsVC.xib in Resources */,
 				EA31DACD1DB5FF1E003B2BD6 /* buton_2.png in Resources */,
+				63B5BC921DD1BAD7005C7B8C /* KPNameCountPriceEditCell.xib in Resources */,
 				EA23B25F1DC602C200F85602 /* Info.plist in Resources */,
 				EA23B2231DC5C99B00F85602 /* 取消.png in Resources */,
 				EA31DAE91DB5FF1E003B2BD6 /* C_S@2x.png in Resources */,
@@ -2447,6 +2470,7 @@
 				EA31DC291DB5FFCB003B2BD6 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				08DC2B6D1DC05F87008DEF30 /* KPTJDuanXinViewController.m in Sources */,
 				EA31DC551DB5FFCB003B2BD6 /* MJRefreshStateHeader.m in Sources */,
+				63B5BC951DD1BB1D005C7B8C /* KPEditNameCountPriceModel.m in Sources */,
 				EA31DC701DB5FFCB003B2BD6 /* UIImage+MultiFormat.m in Sources */,
 				08F12E621DB87C1600CA9535 /* KPYingYeViewController.m in Sources */,
 				08DC2B771DC083C3008DEF30 /* KPFaPiaoViewController.m in Sources */,
@@ -2507,8 +2531,10 @@
 				EA31DC721DB5FFCB003B2BD6 /* UIImageView+WebCache.m in Sources */,
 				EA31DA571DB5F676003B2BD6 /* main.m in Sources */,
 				EA1BA29D1DC6E25100372467 /* KPRequest.m in Sources */,
+				63B5BC991DD1D523005C7B8C /* KPAddResultViewController.m in Sources */,
 				637E1B751DCC826A001C5A6E /* KPGoodsSearchViewController.m in Sources */,
 				EA23B29A1DC6031000F85602 /* ShouHouVC.m in Sources */,
+				63B5BC911DD1BAD7005C7B8C /* KPNameCountPriceEditCell.m in Sources */,
 				EA31DC5B1DB5FFCB003B2BD6 /* NSString+URLEncoding.m in Sources */,
 				EA31DC211DB5FFCB003B2BD6 /* AFNetworkReachabilityManager.m in Sources */,
 				EA31DC2E1DB5FFCB003B2BD6 /* UIWebView+AFNetworking.m in Sources */,
