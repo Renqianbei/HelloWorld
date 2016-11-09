@@ -12,5 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UITextField *priceTextField;
 @property (weak, nonatomic) IBOutlet UITextField *countTextField;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *deleteViewHeight;
 @property(nonatomic,strong)KPEditNameCountPriceModel * model;
+@property(nonatomic,strong)void(^clickHander)();
 @end

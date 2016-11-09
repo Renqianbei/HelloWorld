@@ -18,6 +18,12 @@
     
 }
 
+- (IBAction)delteButtonClick:(id)sender {
+    if (self.clickHander) {
+        self.clickHander();
+    }
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.countTextField.keyboardType = UIKeyboardTypeNumberPad;

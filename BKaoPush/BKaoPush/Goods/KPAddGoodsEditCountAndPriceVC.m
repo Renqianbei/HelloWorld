@@ -14,17 +14,34 @@ static NSString * cellID = @"cellIIIID";
 @interface KPAddGoodsEditCountAndPriceVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIButton *sureButton;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property(nonatomic,assign)BOOL isDeleting;//是否处于删除状态
 @end
 
 @implementation KPAddGoodsEditCountAndPriceVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.isDeleting = NO;
     [self createLeftBarButtonItem];
+    [self createRightBarButtonItem:RightItemTypeTxt text:@"编辑"];
     [self configureTableView];
     [self setMyTitle:@"新增商品"];
     self.sureButton.backgroundColor = KPYellowColor;
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)rightBarButtonItemAction{
+    self.isDeleting = !self.isDeleting;
+    if (self.isDeleting) {
+        [self.rightButton setTitle:@"完成" forState:UIControlStateNormal];
+
+    }else{
+        [self.rightButton setTitle:@"编辑" forState:UIControlStateNormal];
+    }
+    [self.tableView reloadData];
+
+
 }
 
 - (void)configureTableView{
@@ -32,11 +49,13 @@ static NSString * cellID = @"cellIIIID";
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight =182;
     
-    UILabel * label = [[UILabel alloc] initWithFrame:CGRectZero];
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, ScreenWidth-20, 50)];
     label.backgroundColor = [UIColor clearColor];
     label.text = @"您可以修改产品名称、价格、数量 或像左滑动删除不要的商品";
     label.font = [UIFont systemFontOfSize:15];
-    CGSize size = [KPTool stringCGSize:label.text font:15. width:label.frame.size.width - 20 height:200];
+    label.numberOfLines = 0;
+    label.textColor = [UIColor blackColor];
+    CGSize size = [KPTool stringCGSize:label.text font:15 width:label.frame.size.width height:200];
     if (size.height > 50) {
         label.frame = CGRectMake(10, 0, ScreenWidth - 20, size.height);
     }
@@ -61,6 +80,11 @@ static NSString * cellID = @"cellIIIID";
 
 //保存按钮点击事件
 - (IBAction)clickButton:(id)sender {
+    
+    if (self.cellModels.count == 0) {
+        [KPProgress showResultText:@"没有要新增的商品"];
+        return;
+    }
     
     for (KPEditNameCountPriceModel * model in _cellModels) {
         if (!model.count  ||  [[self qukongWith:model.count] isEqualToString:@""] ||!model.price  ||  [[self qukongWith:model.price] isEqualToString:@""]) {
@@ -100,7 +124,20 @@ static NSString * cellID = @"cellIIIID";
     
     KPNameCountPriceEditCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     cell.model = model;
+    if (self.isDeleting) {
+        cell.deleteViewHeight.constant = 40;
+    }else{
+        cell.deleteViewHeight.constant = 0;
+    }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    __weak  typeof(self) weakself = self;
+    __weak typeof(cell) weakCell = cell;
+    cell.clickHander = ^(){
+       //点击删除之后
+        [weakself tableView:weakself.tableView commitEditingStyle:UITableViewCellEditingStyleDelete forRowAtIndexPath:[weakself.tableView indexPathForCell:weakCell]];
+    };
+    
     return  cell;
     
 }

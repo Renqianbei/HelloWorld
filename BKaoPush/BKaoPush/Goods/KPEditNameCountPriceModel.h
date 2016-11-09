@@ -13,4 +13,5 @@
 @property(nonatomic,copy)NSString * price;
 @property(nonatomic,copy)NSString * count;
 
+
 @end
